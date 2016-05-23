@@ -66,6 +66,7 @@ public class Calendrier {
 	 */
 	public Evenement consulterEvenement(Date date) {
 		// TODO - implement Calendrier.consulterEvenement
+		//à compléter
 		throw new UnsupportedOperationException();
 	}
 

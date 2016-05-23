@@ -23,6 +23,7 @@ public class Evenement {
 	}
 	public Evenement(String lieu0, Date date0, int heure0, String nom0) {
 		// TODO - implement Evenement.Evenement
+		// à compléter
 		this.lieu=lieu0;
 		this.date=date0;
 		this.heure=heure0;
