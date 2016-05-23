@@ -1,4 +1,5 @@
 package fr.iutvalence.info.dut.m2107;
+
 public class Date {
 
 	public int jDefaut = 1;
@@ -7,9 +8,13 @@ public class Date {
 	private int j;
 	private int m;
 	private int a;
+	private Evenement event;
 
 	public Date() {
 		// TODO - implement Date.Date
+		this.j=jDefaut;
+		this.m=mDefaut;
+		this.a=aDefaut;
 		throw new UnsupportedOperationException();
 	}
 
@@ -19,36 +24,30 @@ public class Date {
 	 * @param m
 	 * @param a
 	 */
-	public Date(int j, int m, int a) {
+	public Date(int j0, int m0, int a0) {
 		// TODO - implement Date.Date
-		throw new UnsupportedOperationException();
-		this.j = j;
-		this.m = m;
-		this.a = a;
+		this.j = j0;
+		this.m = m0;
+		this.a = a0;
 	}
 
 	public int obtenirJ() {
 		// TODO - implement Date.obtenirJ
-		throw new UnsupportedOperationException();
 		return this.j;
 	}
 
 	public int obtenirM() {
 		// TODO - implement Date.obtenirM
-		throw new UnsupportedOperationException();
 		return this.m;
 	}
 
 	public int obtenirA() {
 		// TODO - implement Date.obtenirA
-		throw new UnsupportedOperationException();
 		return this.a;
 	}
 
 	public String obtenirLaRepresentationTexte() {
 		// TODO - implement Date.obtenirLaRepresentationTexte
-		throw new UnsupportedOperationException();
-		systeme.out.println(this.j + "/" + this.m + "/" + this.a);
+		System.out.println(this.j + "/" + this.m + "/" + this.a);
 	}
-
 }

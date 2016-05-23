@@ -1,16 +1,31 @@
 package fr.iutvalence.info.dut.m2107;
+import java.util.Scanner;
 
 public class Calendrier {
 
-	private Date dateDebutDefaut = (1,1,2000);
-	private Date dateFinDefaut = (31,12,2027);
+	private Date dateDebutDefaut = new Date(1,1,2000);
+	private Date dateFinDefaut = new Date(31,12,2027);
 	private Date dateDebut;
 	private Date dateFin;
-
+	/*private Month January = new Month("January");
+	private Month Febuary = new Month("February");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");
+	private Month January = new Month("January");*/
 	public Calendrier() {
-		// TODO - implement Calendrier.Calendrier
-		throw new UnsupportedOperationException();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Donnez l'année demandée");
+		int year= scanner.nextInt();
 	}
+
+	
 
 	/**
 	 * 
@@ -67,5 +82,6 @@ public class Calendrier {
 		// TODO - implement Calendrier.modifierEvenement
 		throw new UnsupportedOperationException();
 	}
+
 
 }
