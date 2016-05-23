@@ -48,7 +48,7 @@ public class Date {
 
 	public String obtenirLaRepresentationTexte() {
 		// TODO - implement Date.obtenirLaRepresentationTexte
-		// à compléter
-		System.out.println(this.j + "/" + this.m + "/" + this.a);
+		// ï¿½ complï¿½ter
+		return (this.j + "/" + this.m + "/" + this.a);
 	}
 }
