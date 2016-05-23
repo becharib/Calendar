@@ -1,3 +1,5 @@
+package fr.iutvalence.info.dut.m2107;
+
 public class Calendrier {
 
 	private Date dateDebutDefaut = (1,1,2000);

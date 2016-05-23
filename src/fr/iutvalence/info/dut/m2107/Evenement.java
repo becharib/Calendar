@@ -1,3 +1,5 @@
+package fr.iutvalence.info.dut.m2107;
+
 public class Evenement {
 
 	private String nom;
