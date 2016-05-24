@@ -20,7 +20,7 @@ public class Month {
 			  this.num=1;
 		    break;
 		  case "February":
-			  if(((year%4 == 0)&&(year%100 != 0))||(year%400 ==0){
+			  if(((year%4 == 0)&&(year%100 != 0))||(year%400 ==0)){
 				  this.day=29;  
 			  }
 			  else{
