@@ -20,7 +20,13 @@ public class Month {
 			  this.num=1;
 		    break;
 		  case "February":
-			  this.day=29;
+			  if(((year%4 == 0)&&(year%100 != 0))||(year%400 ==0){
+				  this.day=29;  
+			  }
+			  else{
+				  this.day=28;
+			  }
+			 
 			  this.month = new Date[this.day+1];
 			  this.num=2;
 		    break;
