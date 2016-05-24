@@ -8,18 +8,18 @@ public class Calendrier {
 	private Date dateFinDefaut = new Date(31,12,2027);
 	private Date dateDebut;
 	private Date dateFin;
-	/*private Month January = new Month("January");
+	private Month January = new Month("January");
 	private Month Febuary = new Month("February");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");
-	private Month January = new Month("January");*/
+	private Month March = new Month("March");
+	private Month April = new Month("April");
+	private Month May = new Month("May");
+	private Month June = new Month("June");
+	private Month July = new Month("July");
+	private Month August = new Month("August");
+	private Month September = new Month("September");
+	private Month October = new Month("October");
+	private Month November = new Month("November");
+	private Month December = new Month("December");
 	public Calendrier() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Donnez l'année demandée");

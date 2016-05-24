@@ -1,6 +1,8 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class Date {
+import java.util.GregorianCalendar;
+
+public class Date extends GregorianCalendar{
 
 	public int jDefaut = 1;
 	public int mDefaut = 1;

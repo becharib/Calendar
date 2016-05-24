@@ -7,7 +7,7 @@ public class Month {
 	private int num;
 	private Date[] month;
 	
-	public Month(String ActualMonth, int num, int annee){
+	public Month(String ActualMonth, int annee){
 		int k = 1;
 		this.name=ActualMonth;
 		this.year=annee;
