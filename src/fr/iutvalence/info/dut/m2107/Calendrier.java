@@ -4,27 +4,34 @@ import java.util.Scanner;
 
 public class Calendrier {
 
-	/*private Date dateDebutDefaut = new Date(1,1,2000);
+	private Date dateDebutDefaut = new Date(1,1,2000);
 	private Date dateFinDefaut = new Date(31,12,2027);
 	private Date dateDebut;
 	private Date dateFin;
-	private Month January = new Month("January");
-	private Month Febuary = new Month("February");
-	private Month March = new Month("March");
-	private Month April = new Month("April");
-	private Month May = new Month("May");
-	private Month June = new Month("June");
-	private Month July = new Month("July");
-	private Month August = new Month("August");
-	private Month September = new Month("September");
-	private Month October = new Month("October");
-	private Month November = new Month("November");
-	private Month December = new Month("December");
+	private static final YEAR_DEFAULT=2000;
+
+	
+	public CreateYear(int year){
+		private Month January = new Month("January",year);
+		private Month Febuary = new Month("February",year;
+		private Month March = new Month("March",year);
+		private Month April = new Month("April",year);
+		private Month May = new Month("May",year);
+		private Month June = new Month("June",year);
+		private Month July = new Month("July",year);
+		private Month August = new Month("August",year);
+		private Month September = new Month("September",year);
+		private Month October = new Month("October",year);
+		private Month November = new Month("November",year);
+		private Month December = new Month("December",year);
+		
+	}
 	public Calendrier() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Donnez l'ann�e demand�e");
+		System.out.println("Donnez l'annee souhaitee");
 		int year= scanner.nextInt();
-	}*/
+		CreateYear(year);
+	}
 
 	
 
