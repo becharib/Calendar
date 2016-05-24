@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calendrier {
 
-	private Date dateDebutDefaut = new Date(1,1,2000);
+	/*private Date dateDebutDefaut = new Date(1,1,2000);
 	private Date dateFinDefaut = new Date(31,12,2027);
 	private Date dateDebut;
 	private Date dateFin;
@@ -22,9 +22,9 @@ public class Calendrier {
 	private Month December = new Month("December");
 	public Calendrier() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Donnez l'année demandée");
+		System.out.println("Donnez l'annï¿½e demandï¿½e");
 		int year= scanner.nextInt();
-	}
+	}*/
 
 	
 
@@ -67,7 +67,7 @@ public class Calendrier {
 	 */
 	public Evenement consulterEvenement(Date date) {
 		// TODO - implement Calendrier.consulterEvenement
-		//à compléter
+		//ï¿½ complï¿½ter
 		throw new UnsupportedOperationException();
 	}
 

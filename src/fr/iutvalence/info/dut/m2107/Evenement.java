@@ -23,7 +23,7 @@ public class Evenement {
 	}
 	public Evenement(String lieu0, Date date0, int heure0, String nom0) {
 		// TODO - implement Evenement.Evenement
-		// à compléter
+		// ï¿½ complï¿½ter
 		this.lieu=lieu0;
 		this.date=date0;
 		this.heure=heure0;
@@ -34,30 +34,30 @@ public class Evenement {
 	public String obtenirNom() {
 		// TODO - implement Evenement.obtenirNom
 		return(this.nom);
-		throw new UnsupportedOperationException();
+	
 	}
 
 	public String obtenirLieu() {
 		// TODO - implement Evenement.obtenirLieu
 		return(this.lieu);
-		throw new UnsupportedOperationException();
+
 	}
 
 	public Date obtenirDate() {
 		// TODO - implement Evenement.obtenirDate
-		retrun(this.date);
-		throw new UnsupportedOperationException();
+		return(this.date);
+
 	}
 
 	public int obtenirHeure() {
 		// TODO - implement Evenement.obtenirHeure
 		return(this.heure);
-		throw new UnsupportedOperationException();
+
 	}
 
 	public String obtenirLaRepresentationTexte() {
 		// TODO - implement Evenement.obtenirLaRepresentationTexte
-		systeme.out.println("L'évènement"+this.nom + "aura lieu à" this.lieu + " ,le" + this.date + " ,à" + this.heure);
+		System.out.println("L'ï¿½vï¿½nement"+this.nom + "aura lieu ï¿½" +this.lieu + " ,le" + this.date + " ,ï¿½" + this.heure);
 		throw new UnsupportedOperationException();
 	}
 }
