@@ -33,6 +33,8 @@ public class Date{
 		if((j==25) && (m==12))
 			return(true);
 		
+		return(false);
+		
 	}
 	
 	public Date() {
