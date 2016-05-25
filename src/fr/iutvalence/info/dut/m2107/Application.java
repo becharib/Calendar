@@ -8,18 +8,27 @@ public class Application {
 	public static void main(String[] args){
 
 		Scanner sc1 = new Scanner(System.in);
+		System.out.printf("What do you want to do?\n");
+		System.out.printf("[showMonth] [addEvent]\n");
 		
-		System.out.printf("Year ? Exemple : 2016 \n");
-		String yearString = sc1.nextLine();
-		int year = Integer.parseInt(yearString); 
+		String answer = sc1.nextLine();
 		
-		System.out.printf("Month ? Exemple : July \n");
+		switch (answer)
+		{
+		  case "showMonth":
+			  Calendrier.showMonth();
+		    break;
+		    
+		  case "addEvent":
+			  System.out.printf("Entrez un lieu.\n");
+			  String lieu = sc1.nextLine();
+			  System.out.printf("Entrez une date.\n");
+			  String date = sc1.nextLine();
+			  Evenement event=new Evenement(lieu,date);
+			  //Evenement.showEvent(event);
+			  //System.out.println(event);
+		    break;
+		}
 
-		Scanner sc2 = new Scanner(System.in);
-		String month = sc2.nextLine();
-		
-		System.out.printf("[%s,%d]\n", month, year);
-		new Month(month, year);
 	}
-
 }
