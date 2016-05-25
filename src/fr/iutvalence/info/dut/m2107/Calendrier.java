@@ -1,20 +1,23 @@
 package fr.iutvalence.info.dut.m2107;
-import java.util.Date;
+/*import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
-import java.util.Scanner;
+import java.util.Scanner;*/
+import java.util.*;
 
 public class Calendrier {
 
+	private List<Year> yearList = new ArrayList<Year>();
+	
 	private Date dateDebutDefaut = new Date(1,1,2000);
 	private Date dateFinDefaut = new Date(31,12,2027);
-	private Date dateDebut;
-	private Date dateFin;
+	private int beginYear;
+	private int EndYear;
 	private static final int YEAR_DEFAULT=2000;
 
 	
-	/*public void CreateYear(int year){
-		private Month January = new Month("January",year);
+	public void CreateYear(int year){
+		private Month January = new Month(January.january,year);
 		private Month Febuary = new Month("February",year;
 		private Month March = new Month("March",year);
 		private Month April = new Month("April",year);
@@ -27,13 +30,13 @@ public class Calendrier {
 		private Month November = new Month("November",year);
 		private Month December = new Month("December",year);
 		
-	}*/
+	}
 	
 	public Calendrier() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Donnez l'annee souhaitee");
 		int year= scanner.nextInt();
-		//CreateYear(year);
+		CreateYear(year);
 	}
 
 	public static void showMonth(){
@@ -57,7 +60,7 @@ public class Calendrier {
 	 * @param dateDebut
 	 * @param dateFin
 	 */
-	public Calendrier(Date dateDebut, Date dateFin) {
+	public Calendrier(int beginYear, int endYear) {
 		// TODO - implement Calendrier.Calendrier
 		throw new UnsupportedOperationException();
 	}

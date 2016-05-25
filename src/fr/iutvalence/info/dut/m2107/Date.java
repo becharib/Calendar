@@ -74,9 +74,9 @@ public class Date{
 		// TODO - implement Date.obtenirA
 		return this.a;
 	}
-	public int getPublicHoliday() {
+	public int getpublicHoliday() {
 		// TODO - implement Date.obtenirA
-		return this.PublicHoliday;
+		return this.publicHoliday;
 	}
 	
 	

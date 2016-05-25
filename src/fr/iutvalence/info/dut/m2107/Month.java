@@ -91,21 +91,23 @@ public class Month {
 		
 		
 	}
-	//� compl�ter
+
 
 	 
-	/*January,                 	
-	February,
-	March,                 
-	April,
-    May,
-	June,
-	July,
-    August,       
-	September,
-	October,
-	November,
-	December;
-*/
+	public enum NomMois{
+		January,                 	
+		February,
+		March,                 
+		April,
+	    May,
+		June,
+		July,
+	    August,       
+		September,
+		October,
+		November,
+		December;
+	}
+
 
 }
