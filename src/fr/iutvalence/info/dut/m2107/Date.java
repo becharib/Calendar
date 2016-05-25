@@ -2,7 +2,7 @@ package fr.iutvalence.info.dut.m2107;
 
 import java.util.GregorianCalendar;
 
-public class Date extends GregorianCalendar{
+public class Date{
 
 	public int jDefaut = 1;
 	public int mDefaut = 1;
@@ -10,13 +10,36 @@ public class Date extends GregorianCalendar{
 	private int j;
 	private int m;
 	private int a;
+	private boolean publicHoliday=false;
 	private Evenement event;
 
+	public boolean PublicHoliday(int j, int m){
+		if((j==1) && (m==1))
+			return(true);
+		if((j==28) && (m==3))
+			return(true);
+		if((j==1) && (m==5))
+			return(true);
+		if((j==5) && (m==5))
+			return(true);
+		if((j==8) && (m==5))
+			return(true);
+		if((j==16) && (m==5))
+			return(true);
+		if((j==14) && (m==7))
+			return(true);
+		if((j==1) && (m==11))
+			return(true);
+		if((j==25) && (m==12))
+			return(true);
+		
+	}
+	
 	public Date() {
-		// TODO - implement Date.Date
 		this.j=jDefaut;
 		this.m=mDefaut;
 		this.a=aDefaut;
+		this.publicHoliday = PublicHoliday(jDefaut, mDefaut);
 		throw new UnsupportedOperationException();
 	}
 
@@ -31,7 +54,9 @@ public class Date extends GregorianCalendar{
 		this.j = j0;
 		this.m = m0;
 		this.a = a0;
+		this.publicHoliday = PublicHoliday(j0, m0);
 	}
+	
 
 	public int obtenirJ() {
 		// TODO - implement Date.obtenirJ
@@ -47,6 +72,12 @@ public class Date extends GregorianCalendar{
 		// TODO - implement Date.obtenirA
 		return this.a;
 	}
+	public int getPublicHoliday() {
+		// TODO - implement Date.obtenirA
+		return this.PublicHoliday;
+	}
+	
+	
 
 	public String obtenirLaRepresentationTexte() {
 		// TODO - implement Date.obtenirLaRepresentationTexte
