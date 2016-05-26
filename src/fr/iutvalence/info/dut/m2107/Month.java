@@ -8,7 +8,6 @@ public class Month {
 	private Date[] month;
 	
 	public Month(String ActualMonth, int year){
-		int k = 1;
 		this.name=ActualMonth;
 		this.year=year;
 		
@@ -83,14 +82,23 @@ public class Month {
 		    break;
 		}
 		
-		
-		for(int i=1;i<=this.day;i++){
-			month[i]= new Date(i,this.num,this.year);
+	}
+	
+	public static void showMonth(Month month){
+		for(int i=1;i<=month.day;i++){
+			month.month[i]= new Date(i,month.num,month.year);
 			System.out.println("Day " + i + "[Event:  ]");
 		}
-		
-		
 	}
+	
+	public static int getNum(Month month){
+		return month.num;
+	}
+	
+	public static Date getDay(Month month, int day){
+			return month.month[day];
+	}
+	
 
 
 	 

@@ -17,8 +17,8 @@ public class Calendrier {
 
 	
 	public void CreateYear(int year){
-		private Month January = new Month(January.january,year);
-		private Month Febuary = new Month("February",year;
+		private Month january = new Month("January",year);
+		private Month febuary = new Month("February",year;
 		private Month March = new Month("March",year);
 		private Month April = new Month("April",year);
 		private Month May = new Month("May",year);
@@ -39,7 +39,7 @@ public class Calendrier {
 		CreateYear(year);
 	}
 
-	public static void showMonth(){
+	public static void createMonth(){
 		Scanner sc1 = new Scanner(System.in);
 		
 		System.out.printf("Year ? Exemple : 2016 \n");
@@ -52,7 +52,7 @@ public class Calendrier {
 		String month = sc2.nextLine();
 		
 		System.out.printf("[%s,%d]\n", month, year);
-		new Month(month, year);
+		Month.showMonth(new Month(month, year));
 	}
 
 	/**

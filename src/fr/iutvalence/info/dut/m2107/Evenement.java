@@ -1,20 +1,21 @@
 package fr.iutvalence.info.dut.m2107;
+import java.util.Date;
 
 public class Evenement {
 
 	String place;
-	String date;
+	int hour;
 
-	public Evenement(String place, String date) {
+	public Evenement(String place, int hour) {
 		this.place=place;
-		this.date=date;
-		this.showEvent();
+		this.hour=hour;
 	}
 	
-	public void showEvent(){
-		System.out.printf("Place: %s",this.place);
+	public static void showEvent(Evenement event){
+		System.out.printf("Place: %s",event.place);
 		System.out.printf(" ");
-		System.out.printf("Date: %s",this.date);
+		System.out.printf("Place: %d",event.hour);
+		
 	}
 
 }

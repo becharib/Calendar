@@ -13,8 +13,9 @@ public class Date{
 	private boolean publicHoliday=false;
 	private Evenement event;
 
-	public boolean PublicHoliday(int j, int m){
-		if((j==1) && (m==1))
+	public boolean PublicHoliday(int j, int mDefaut2){
+		return true;
+		/*if((j==1) && (mm()==1))
 			return(true);
 		if((j==28) && (m==3))
 			return(true);
@@ -33,7 +34,7 @@ public class Date{
 		if((j==25) && (m==12))
 			return(true);
 		
-		return(false);
+		return(false);*/
 		
 	}
 	
@@ -74,14 +75,20 @@ public class Date{
 		// TODO - implement Date.obtenirA
 		return this.a;
 	}
-	public int getpublicHoliday() {
+	public boolean getpublicHoliday() {
 		// TODO - implement Date.obtenirA
 		return this.publicHoliday;
 	}
 	
+	public static Evenement getEvent(Date date){
+		return date.event;
+	}
 	
+	public static void addEvent(Date date, Evenement event){
+		date.event=event;
+	}
 
-	public String obtenirLaRepresentationTexte() {
+	public String getDate(Date date) {
 		// TODO - implement Date.obtenirLaRepresentationTexte
 		// � compl�ter
 		return (this.j + "/" + this.m + "/" + this.a);
