@@ -1,6 +1,5 @@
 package fr.iutvalence.info.dut.m2107;
 
-import java.util.GregorianCalendar;
 
 public class Date{
 
@@ -13,9 +12,8 @@ public class Date{
 	private boolean publicHoliday=false;
 	private Evenement event;
 
-	public boolean PublicHoliday(int j, int mDefaut2){
-		return true;
-		/*if((j==1) && (mm()==1))
+	public boolean PublicHoliday(int j, int m){
+		if((j==1) && (m==1))
 			return(true);
 		if((j==28) && (m==3))
 			return(true);
@@ -34,7 +32,7 @@ public class Date{
 		if((j==25) && (m==12))
 			return(true);
 		
-		return(false);*/
+		return(false);
 		
 	}
 	
@@ -53,7 +51,6 @@ public class Date{
 	 * @param a
 	 */
 	public Date(int j0, int m0, int a0) {
-		// TODO - implement Date.Date
 		this.j = j0;
 		this.m = m0;
 		this.a = a0;
@@ -62,21 +59,17 @@ public class Date{
 	
 
 	public int obtenirJ() {
-		// TODO - implement Date.obtenirJ
 		return this.j;
 	}
 
 	public int obtenirM() {
-		// TODO - implement Date.obtenirM
 		return this.m;
 	}
 
 	public int obtenirA() {
-		// TODO - implement Date.obtenirA
 		return this.a;
 	}
 	public boolean getpublicHoliday() {
-		// TODO - implement Date.obtenirA
 		return this.publicHoliday;
 	}
 	
@@ -90,7 +83,11 @@ public class Date{
 
 	public String getDate(Date date) {
 		// TODO - implement Date.obtenirLaRepresentationTexte
-		// ï¿½ complï¿½ter
-		return (this.j + "/" + this.m + "/" + this.a);
+		if(this.publicHoliday){
+			return (this.j + "/" + this.m + "/" + this.a + " , Jour férié");
+		}
+		else{
+			return (this.j + "/" + this.m + "/" + this.a + " , Jour non férié");
+		}
 	}
 }
