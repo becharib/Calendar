@@ -72,7 +72,7 @@ public class Calendrier {
 	 * 
 	 * @param evenement
 	 */
-	public void entrerEvenement(Evenement evenement) {
+	public void entrerEvenement(Evenement evenement, Date date) {
 		// TODO - implement Calendrier.entrerEvenement
 		throw new UnsupportedOperationException();
 	}
@@ -83,11 +83,10 @@ public class Calendrier {
 	 */
 	public Evenement consulterEvenement(Date date) {
 		// TODO - implement Calendrier.consulterEvenement
-		//� compl�ter
 		throw new UnsupportedOperationException();
 	}
 
-	public void supprimerEvenement() {
+	public void supprimerEvenement(Date date) {
 		// TODO - implement Calendrier.supprimerEvenement
 		throw new UnsupportedOperationException();
 	}
