@@ -76,7 +76,7 @@ public class MainFrame extends JFrame {
 			}
 		catch(IOException e)
 		{
-			System.out.println("Image doesn't exist");
+			System.out.println("Image does not exist");
 		}
 		window.setResizable(false);
 		window.pack();
