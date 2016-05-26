@@ -19,7 +19,6 @@ public class MainFrame extends JFrame {
 	private String letitre;
 	private Dimension ladimension;
 	private String cheminfond;
-	private String couleurfond;
 	
 	public MainFrame(String title, Dimension dim, String pathfond) {
 		this.letitre=title;
@@ -31,9 +30,9 @@ public class MainFrame extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		this.setVisible(true);
+		this.setResizable(true);
 		ImageIcon img = new ImageIcon(pathfond);
 		this.setIconImage(img.getImage());
-		this.setResizable(false);
 		try{
 			this.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File(pathfond)))));
 				}
@@ -41,26 +40,22 @@ public class MainFrame extends JFrame {
 			{
 				System.out.println("Image doesn't exist");
 			}
-			this.setResizable(false);
-			this.pack();
+			this.setResizable(true);
 			this.setVisible(true);			
 			this.setSize(dim);
 	}
 	
-	public void MainFrameWithColor(String title, Dimension dim, String color) {
+	public void MainFrameWithColor(String title, Dimension dim) {
 		this.letitre=title;
-		this.ladimension=dim;
-		this.couleurfond=color;
-		
+		this.ladimension=dim;		
 		this.setTitle(title);
 		this.setSize(dim);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		this.setVisible(true);
-		/*this.setBackground(Color.color);*/
 	}
 	
-	public static void MainFrame() {
+	public static void BasicFrame() {
 
 		JFrame window = new JFrame("Calendar");	
 	    window.setTitle("Calendar");
