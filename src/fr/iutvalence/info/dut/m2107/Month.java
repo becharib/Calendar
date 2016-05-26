@@ -2,23 +2,22 @@ package fr.iutvalence.info.dut.m2107;
 
 public class Month {
 	private int day;
-	private static String name;
+	private String name;
 	private int year;
 	private int num;
 	private Date[] month;
 	
-	public Month(String ActualMonth, int year){
-		this.name=ActualMonth;
+	public Month(int num, int year){
 		this.year=year;
 		
-		switch (ActualMonth)
+		switch (num)
 		{
-		  case "January":
+		  case 1:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=1;
+			  this.name="January";
 		    break;
-		  case "February":
+		  case 2:
 			  if(((year%4 == 0)&&(year%100 != 0))||(year%400 ==0)){
 				  this.day=29;  
 			  }
@@ -27,63 +26,64 @@ public class Month {
 			  }
 			 
 			  this.month = new Date[this.day+1];
-			  this.num=2;
+			  this.name="February";
 		    break;
-		  case "March":
+		  case 3:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=3;
+			  this.name="March";
 		    break;
-		  case "April":
+		  case 4:
 			  this.day=30;
 			  this.month = new Date[this.day+1];
-			  this.num=4;
+			  this.name="April";
 			  break;
-		  case "May":
+		  case 5:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=5;
+			  this.name="May";;
 		    break;
-		  case "June":
+		  case 6:
 			  this.day=30;
 			  this.month = new Date[this.day+1];
-			  this.num=6;
+			  this.name="June";
 			  break;
-		  case "July":
+		  case 7:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=7;
+			  this.name="July";
 		    break;
-		  case "August":
+		  case 8:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=8;
+			  this.name="August";
 		    break;
 		    
-		  case "September":
+		  case 9:
 			  this.day=30;
 			  this.month = new Date[this.day+1];
-			  this.num=9;
+			  this.name="September";
 		    break;
-		  case "October":
+		  case 10:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=10;
+			  this.name="October";
 		    break;
-		  case "November":
+		  case 11:
 			  this.day=30;
 			  this.month = new Date[this.day+1];
-			  this.num=11;
+			  this.name="November";
 		    break;
-		  case "December":
+		  case 12:
 			  this.day=31;
 			  this.month = new Date[this.day+1];
-			  this.num=12;
+			  this.name="December";
 		    break;
 		}
 		
 	}
 	
+
 	public static void showMonth(Month month){
 		for(int i=1;i<=month.day;i++){
 			month.month[i]= new Date(i,month.num,month.year);
@@ -98,24 +98,13 @@ public class Month {
 	public static Date getDay(Month month, int day){
 			return month.month[day];
 	}
+
+	public String getName() {
+		return this.name;
+	}
+
 	
 
-
-	 
-	public enum NomMois{
-		January,                 	
-		February,
-		March,                 
-		April,
-	    May,
-		June,
-		July,
-	    August,       
-		September,
-		October,
-		November,
-		December;
-	}
 
 
 }

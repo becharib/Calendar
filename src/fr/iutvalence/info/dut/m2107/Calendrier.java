@@ -15,28 +15,27 @@ public class Calendrier {
 	private int EndYear;
 	private static final int YEAR_DEFAULT=2000;
 
-	
-	public void CreateYear(int year){
-		private Month january = new Month("January",year);
-		private Month febuary = new Month("February",year;
-		private Month March = new Month("March",year);
-		private Month April = new Month("April",year);
-		private Month May = new Month("May",year);
-		private Month June = new Month("June",year);
-		private Month July = new Month("July",year);
-		private Month August = new Month("August",year);
-		private Month September = new Month("September",year);
-		private Month October = new Month("October",year);
-		private Month November = new Month("November",year);
-		private Month December = new Month("December",year);
-		
-	}
+
 	
 	public Calendrier() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Donnez l'annee souhaitee");
 		int year= scanner.nextInt();
-		CreateYear(year);
+		yearList.add(new Year(year));
+	}
+
+	
+	/**
+	 * 
+	 * @param dateDebut
+	 * @param dateFin
+	 */
+	public Calendrier(int beginYear, int endYear) {
+		for(int i=beginYear;i<endYear;i++){
+			yearList.add(new Year(i));
+		}
+		//yearList.get(0).getMonth().get
+		throw new UnsupportedOperationException();
 	}
 
 	public static void createMonth(){
@@ -53,16 +52,6 @@ public class Calendrier {
 		
 		System.out.printf("[%s,%d]\n", month, year);
 		Month.showMonth(new Month(month, year));
-	}
-
-	/**
-	 * 
-	 * @param dateDebut
-	 * @param dateFin
-	 */
-	public Calendrier(int beginYear, int endYear) {
-		// TODO - implement Calendrier.Calendrier
-		throw new UnsupportedOperationException();
 	}
 
 	/**
