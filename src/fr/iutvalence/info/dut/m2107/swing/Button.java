@@ -1,6 +1,7 @@
 package fr.iutvalence.info.dut.m2107.swing;
 
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 
@@ -27,4 +28,17 @@ public class Button extends JButton{
 		this.setFocusPainted(false);
 		this.setForeground(Color.WHITE);
 	}
+	
+	public static void Bouton1() {
+		
+		JPanel pan = new JPanel();
+		JButton bouton = new JButton("Mon bouton");
+		pan.add(bouton);
+		/*
+		MainFrame.window.setContentPane(pan);
+	
+	    MainFrame.setVisible(true);
+		*/
+	}
+
 }

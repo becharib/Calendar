@@ -2,6 +2,8 @@ package fr.iutvalence.info.dut.m2107.swing;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.event.ActionListener;
 import java.io.*;
 
 import javax.swing.*;
@@ -20,32 +22,22 @@ import javax.swing.JLabel;
 
 public class Window extends JFrame{
 	
-	public static void main(String[] args) {
-		
-		JFrame window = new JFrame("Calendar");		
-	    window.setTitle("Calendar");
-		window.setSize(1000, 800);
-	    window.setLocationRelativeTo(null);
-	    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
-	    window.setVisible(true);
-	    ImageIcon img = new ImageIcon("img/calendar-icon.png");
-		window.setIconImage(img.getImage());
-		window.setResizable(false);
-		try{
-		window.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("./img/fond.png")))));
-			}
-		catch(IOException e)
-		{
-			System.out.println("Image doesn't exist");
-		}
-		window.setResizable(false);
-		window.pack();
-		window.setVisible(true);
-		window.setSize(1000, 800);
-		
-		JButton quitter = new JButton("Quitter");
-		
-		}
+	private MainFrame theFrame;
+	private Button toHomePagebutton;
 	
-
+	public Window(MainFrame mainframe, Button button) {
+		this.theFrame=mainframe;
+		this.setBackground(Color.GRAY);
+		this.setSize(1024, 768);
+		
+		this.toHomePagebutton = new Button(new ImageIcon("img/button.png"), new Dimension(1024,68), "  GO TO HOMEPAGE");
+		this.toHomePagebutton.setFont(new Font("LAO UI", 1, 32));
+		this.toHomePagebutton.setBackground(new Color(231, 76, 60));
+	  	this.toHomePagebutton.addActionListener((ActionListener) button);
+	}
+	
+	public static void main(String[] args) {
+		/* MainFrame.MainFrame(); */
+		new MainFrame("Calendar", new Dimension(1000,800), "img/fond.png");
+	}
 }
