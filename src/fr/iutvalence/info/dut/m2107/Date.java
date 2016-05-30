@@ -80,10 +80,7 @@ public class Date{
 	public static void addEvent(Date date, Evenement event){
 		date.event=event;
 	}
-	public void entrerEvenement(Evenement evenement, Date date) {
-		// TODO - implement Calendrier.entrerEvenement
-		throw new UnsupportedOperationException();
-	}
+	
 
 	/**
 	 * 
@@ -91,12 +88,14 @@ public class Date{
 	 */
 	public Evenement consulterEvenement(Date date) {
 		// TODO - implement Calendrier.consulterEvenement
+		return(this.event);
 		throw new UnsupportedOperationException();
 	}
 
 	public void supprimerEvenement(Date date) {
 		// TODO - implement Calendrier.supprimerEvenement
-		yearList.get(year[month[day].event.place])=null;
+		this.event.place="";
+		this.event.hour=0;
 		throw new UnsupportedOperationException();
 	}
 
@@ -106,6 +105,7 @@ public class Date{
 	 */
 	public void modifierEvenement(Evenement evenement) {
 		// TODO - implement Calendrier.modifierEvenement
+		
 		throw new UnsupportedOperationException();
 	}
 
