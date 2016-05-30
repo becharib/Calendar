@@ -80,6 +80,35 @@ public class Date{
 	public static void addEvent(Date date, Evenement event){
 		date.event=event;
 	}
+	public void entrerEvenement(Evenement evenement, Date date) {
+		// TODO - implement Calendrier.entrerEvenement
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param date
+	 */
+	public Evenement consulterEvenement(Date date) {
+		// TODO - implement Calendrier.consulterEvenement
+		throw new UnsupportedOperationException();
+	}
+
+	public void supprimerEvenement(Date date) {
+		// TODO - implement Calendrier.supprimerEvenement
+		yearList.get(year[month[day].event.place])=null;
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param evenement
+	 */
+	public void modifierEvenement(Evenement evenement) {
+		// TODO - implement Calendrier.modifierEvenement
+		throw new UnsupportedOperationException();
+	}
+
 
 	public String getDate(Date date) {
 		// TODO - implement Date.obtenirLaRepresentationTexte

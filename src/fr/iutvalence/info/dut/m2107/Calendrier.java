@@ -88,6 +88,7 @@ public class Calendrier {
 
 	public void supprimerEvenement(Date date) {
 		// TODO - implement Calendrier.supprimerEvenement
+		yearList.get(year[month[day].event.place])=null;
 		throw new UnsupportedOperationException();
 	}
 
