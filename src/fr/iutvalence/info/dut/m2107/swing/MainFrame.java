@@ -23,7 +23,8 @@ public class MainFrame extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
         this.setVisible(true);
-        bouton = new Button(new ImageIcon("/img/calendar-icon.png"),new Dimension(1000,100),"  GO TO CALENDAR");
+        ImageIcon icon = new ImageIcon(new ImageIcon("img/calendar-icon.png").getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+        bouton = new Button(icon,new Dimension(1000,100),"  GO TO CALENDAR");
         this.add(bouton);
         this.bouton.addActionListener(this);
         
