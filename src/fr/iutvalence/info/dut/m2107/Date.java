@@ -91,6 +91,7 @@ public class Date{
 		return(this.event);
 	}
 	
+	
 
 	public void supprimerEvenement(Date date) {
 		// TODO - implement Calendrier.supprimerEvenement

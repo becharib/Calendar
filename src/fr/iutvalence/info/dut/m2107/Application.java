@@ -16,7 +16,7 @@ public class Application {
 		System.out.printf("[showMonth] [addEvent]\n");
 		
 		
-		/* */
+		
 		/*String answer = sc1.nextLine();
 		
 		switch (answer)
