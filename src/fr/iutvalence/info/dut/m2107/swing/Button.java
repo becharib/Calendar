@@ -31,4 +31,16 @@ public class Button extends JButton{
 		this.setForeground(Color.GRAY);
 	}
 
+	public Button(ImageIcon img){
+		this.setIcon(img);
+		this.setBorderPainted(false);		
+	}
+	
+	public Button(Dimension size, String text){
+		super(text);
+		this.setPreferredSize(size);
+		this.setBorderPainted(false);
+		this.setFocusPainted(false);
+		this.setForeground(Color.GRAY);
+	}
 }
