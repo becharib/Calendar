@@ -5,12 +5,18 @@ import java.util.Scanner;
 public class Application {
 	
 	public static void main(String[] args){
-
+		int beginYear,endYear;
 		Scanner sc1 = new Scanner(System.in);
+		System.out.printf("Please enter a begin Year\n");
+		beginYear=sc1.nextInt();
+		System.out.printf("Please enter a end Year\n");
+		endYear=sc1.nextInt();
+		Calendrier Calendar1 = new Calendrier(beginYear,endYear);
 		System.out.printf("What do you want to do?\n");
 		System.out.printf("[showMonth] [addEvent]\n");
 		
-		String answer = sc1.nextLine();
+		
+		/*String answer = sc1.nextLine();
 		
 		switch (answer)
 		{
@@ -43,7 +49,7 @@ public class Application {
 			  //Evenement.showEvent(event);
 			  //System.out.println(event);
 		    break;
-		}
+		}*/
 
 	}
 }

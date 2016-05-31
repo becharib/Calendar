@@ -37,21 +37,77 @@ public class Calendrier {
 		//yearList.get(0).getMonth().get
 		throw new UnsupportedOperationException();
 	}
+	
+	public static int ConvertMonth(String month){
+		int numMonth=0;
+		while(numMonth==0){
+
+			switch (month)
+			{
+			  case "January":
+				  numMonth=1;
+			    break;
+			  case "February":
+				  numMonth=2;
+			    break;
+			  case "March":
+				  numMonth=3;
+			    break;
+			  case "April":
+				  numMonth=4;
+			    break;
+			  case "May":
+				  numMonth=5;
+			    break;
+			  case "June":
+				  numMonth=6;
+			    break;
+			  case "July":
+				  numMonth=7;
+			    break;
+			  case "August":
+				  numMonth=8;
+			    break;
+			  case "September":
+				  numMonth=9;
+			    break;
+			  case "October":
+				  numMonth=10;
+			    break;
+			  case "November":
+				  numMonth=11;
+			    break;
+			  case "December":
+				  numMonth=12;
+			    break;
+			  default:
+				  System.out.println("Please enter the month again");
+			}
+			
+			
+		}
+		return(numMonth);
+		
+	}
 
 	public static void createMonth(){
 		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
+		int numMonth=0;
+		String month="";
 		
 		System.out.printf("Year ? Exemple : 2016 \n");
 		String yearString = sc1.nextLine();
 		int year = Integer.parseInt(yearString); 
-		
-		System.out.printf("Month ? Exemple : July \n");
-
-		Scanner sc2 = new Scanner(System.in);
-		String month = sc2.nextLine();
-		
+		sc1.close();
+		System.out.printf("Month ? Exemple : July \n");	
+		month = sc2.nextLine();
+		numMonth=ConvertMonth(month);
+	
+		sc2.close();
 		System.out.printf("[%s,%d]\n", month, year);
-		Month.showMonth(new Month(month, year));
+		Month.showMonth(new Month(numMonth, year));
+	
 	}
 
 	/**
