@@ -18,9 +18,6 @@ public class ImagePanel extends JPanel {
      */
     public static void main(String[] args) {
         MainFrame frame = new MainFrame();
-        JPanel panel = new JPanel();
-        panel.add(new Button(new ImageIcon("/img/calendar-icon.png"),new Dimension(1000,100)));
-        frame.add(panel);
     }
  
     private Image img;
