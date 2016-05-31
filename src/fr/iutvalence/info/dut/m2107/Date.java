@@ -90,6 +90,7 @@ public class Date{
 		// TODO - implement Calendrier.consulterEvenement
 		return(this.event);
 	}
+	
 
 	public void supprimerEvenement(Date date) {
 		// TODO - implement Calendrier.supprimerEvenement
