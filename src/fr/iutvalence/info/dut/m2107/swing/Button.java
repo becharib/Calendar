@@ -12,6 +12,8 @@ import javax.swing.JPanel;
 
 public class Button extends JButton{
 	
+	private static final long serialVersionUID = 1L;
+
 	public Button(ImageIcon img, Dimension size){
 		super();
 		this.setIcon(img);
@@ -26,19 +28,7 @@ public class Button extends JButton{
 		this.setPreferredSize(size);
 		this.setBorderPainted(false);
 		this.setFocusPainted(false);
-		this.setForeground(Color.WHITE);
-	}
-	
-	public static void Bouton1() {
-		
-		JPanel pan = new JPanel();
-		JButton bouton = new JButton("Mon bouton");
-		pan.add(bouton);
-		/*
-		MainFrame.window.setContentPane(pan);
-	
-	    MainFrame.setVisible(true);
-		*/
+		this.setForeground(Color.GRAY);
 	}
 
 }
