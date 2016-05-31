@@ -44,7 +44,6 @@ public class MainFrame extends JFrame implements ActionListener {
         this.bouton.addActionListener(this);
         this.add(bouton); 
         
-        
     }
 
 	@Override

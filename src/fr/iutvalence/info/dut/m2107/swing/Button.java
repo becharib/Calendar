@@ -57,8 +57,10 @@ public class Button extends JButton{
 		super(text);
 		this.setFocusPainted(false);
 		this.setBorderPainted(true);
-		this.setContentAreaFilled(false);
+		this.setContentAreaFilled(true);
 		this.setLayout(null);
+		this.setForeground(Color.BLACK);
+		this.setBackground(new Color(220,195,125));
 	}
 	
 	public Button(ImageIcon img, String text) {
