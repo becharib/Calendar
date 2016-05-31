@@ -16,22 +16,21 @@ public class CalendarFrame extends JFrame {
 		this.setTitle("Calendar");
 		this.setSize(new Dimension(1000,800));
 		this.setLocationRelativeTo(null);
+		this.setResizable(false);
 		this.setVisible(true);
 		this.setLayout(new GridLayout(3, 4));
-		JButton bouton = new JButton("Bilal");
-		bouton.setBackground(new Color(254,231,240));
-		this.getContentPane().add(bouton);
-	    this.getContentPane().add(new JButton("2"));
-	    this.getContentPane().add(new JButton("3"));
-	    this.getContentPane().add(new JButton("4"));
-	    this.getContentPane().add(new JButton("5"));
-	    this.getContentPane().add(new JButton("1"));
-	    this.getContentPane().add(new JButton("2"));
-	    this.getContentPane().add(new JButton("3"));
-	    this.getContentPane().add(new JButton("4"));
-	    this.getContentPane().add(new JButton("5"));
-	    this.getContentPane().add(new JButton("5"));
-	    this.getContentPane().add(new JButton("5"));
+		this.getContentPane().add(new Button("January"));
+		this.getContentPane().add(new Button("February"));
+		this.getContentPane().add(new Button("March"));
+		this.getContentPane().add(new Button("April"));
+		this.getContentPane().add(new Button("May"));
+		this.getContentPane().add(new Button("June"));
+		this.getContentPane().add(new Button("July"));
+		this.getContentPane().add(new Button("August"));
+		this.getContentPane().add(new Button("September"));
+		this.getContentPane().add(new Button("October"));
+		this.getContentPane().add(new Button("November"));
+		this.getContentPane().add(new Button("December"));
 	    
 	}
 }
