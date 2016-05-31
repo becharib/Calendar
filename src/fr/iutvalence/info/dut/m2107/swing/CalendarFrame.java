@@ -3,6 +3,7 @@ package fr.iutvalence.info.dut.m2107.swing;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -23,6 +24,8 @@ public class CalendarFrame extends JFrame {
 	Button october;
 	Button november;
 	Button december;
+	Button precedent;
+	Button quitter;
 	
 	public CalendarFrame() {
 		this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
@@ -45,6 +48,11 @@ public class CalendarFrame extends JFrame {
 		october = new Button("October");
 		november = new Button("November");
 		december = new Button("December");
+		
+		ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/precedent.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		precedent = new Button(precedentIcon);
+		ImageIcon quitterIcon = new ImageIcon(new ImageIcon("img/quitter.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		quitter = new Button(quitterIcon);
 		
 		this.add(january);
 		this.add(february);
