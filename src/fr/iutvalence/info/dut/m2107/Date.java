@@ -89,8 +89,9 @@ public class Date{
 	public Evenement consulterEvenement(Date date) {
 		// TODO - implement Calendrier.consulterEvenement
 		return(this.event);
-		throw new UnsupportedOperationException();
 	}
+	
+	
 
 	public void supprimerEvenement(Date date) {
 		// TODO - implement Calendrier.supprimerEvenement
