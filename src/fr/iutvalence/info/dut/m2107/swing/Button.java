@@ -67,5 +67,4 @@ public class Button extends JButton{
 		this.setBorderPainted(false);	
 		this.setLayout(null);
 	}
-	
 }

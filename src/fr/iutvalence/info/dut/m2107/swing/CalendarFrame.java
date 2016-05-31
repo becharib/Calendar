@@ -31,6 +31,7 @@ public class CalendarFrame extends JFrame {
 		this.getContentPane().add(new Button("October"));
 		this.getContentPane().add(new Button("November"));
 		this.getContentPane().add(new Button("December"));
+		
 	    
 	}
 }
