@@ -104,12 +104,12 @@ public class CalendarFrame extends JFrame implements ActionListener {
 		this.setVisible(true);
 		this.setLayout(null);
 		
-		label = new JLabel(annee);
+		label = new JLabel(annee+" Calendar");
 		this.add(label);
 		
 		Font f = new Font("Arial", Font.ITALIC + Font.BOLD, 50); 
 		
-		label.setBounds(440,10,500,80);
+		label.setBounds(325,10,500,80);
 		label.setForeground(new Color(215,90,90));
 		label.setFont(f);
 		
