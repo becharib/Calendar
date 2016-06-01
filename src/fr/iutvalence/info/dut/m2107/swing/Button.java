@@ -15,7 +15,7 @@ public class Button extends JButton{
 	
 	private static final long serialVersionUID = 1L;
 	
-	Font f = new Font("Arial", Font.ITALIC + Font.BOLD, 25); 
+	Font f = new Font("Arial", Font.ITALIC + Font.BOLD, 25);
 
 	public Button(ImageIcon img, Dimension size){
 		super();

@@ -20,7 +20,7 @@ public class MenuComboBox extends JFrame implements ActionListener {
 	private Button continuer;
 	
 	public MenuComboBox() {
-	this.setTitle("Choix d'une année");
+	this.setTitle("Year Choices ");
 	this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     this.setSize(new Dimension(300,220));
     this.setLocationRelativeTo(null);
@@ -28,19 +28,19 @@ public class MenuComboBox extends JFrame implements ActionListener {
     this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
     this.setLayout(null);
     
-    label = new JLabel("Choisissez une année ");
-    label.setBounds(85,50,128,50);
+    label = new JLabel("Choose a year ");
+    label.setBounds(107,50,128,50);
     
-    choixannee = new JComboBox<String>();
-    choixannee.addItem("2016");
-    choixannee.addItem("2017");
-    choixannee.addItem("2018");
-    choixannee.addItem("2019");
-    choixannee.addItem("2020");
-    choixannee.addItem("2021");
-    choixannee.addItem("2022");
-    choixannee.addItem("2023");
-    choixannee.setBounds(113,90,70,20);
+    this.choixannee = new JComboBox<String>();
+    this.choixannee.addItem("2016");
+    this.choixannee.addItem("2017");
+    this.choixannee.addItem("2018");
+    this.choixannee.addItem("2019");
+    this.choixannee.addItem("2020");
+    this.choixannee.addItem("2021");
+    this.choixannee.addItem("2022");
+    this.choixannee.addItem("2023");
+    this.choixannee.setBounds(113,90,70,20);
     
     ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/back.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 	back = new Button(precedentIcon);
@@ -55,6 +55,7 @@ public class MenuComboBox extends JFrame implements ActionListener {
     
     this.back.addActionListener(this);
 	this.continuer.addActionListener(this);
+	this.choixannee.addActionListener(this);
         
     this.add(continuer);
     this.add(back);
@@ -71,12 +72,45 @@ public class MenuComboBox extends JFrame implements ActionListener {
 			this.dispose();
 		}
 		
-		if (e.getSource() == this.continuer) {
-			this.dispose();
-			new CalendarFrame();
+		if ( choixannee.getSelectedItem() == "2016" && e.getSource() == this.continuer) {
+			String annee = new String("2016");
+			new CalendarFrame(annee);
 		}
 			
-			
+		if ( choixannee.getSelectedItem() == "2017" && e.getSource() == this.continuer) {
+			String annee = new String("2017");
+			new CalendarFrame(annee);
+		}
 		
+		if ( choixannee.getSelectedItem() == "2018" && e.getSource() == this.continuer) {
+			String annee = new String("2018");
+			new CalendarFrame(annee);
+		}
+		
+		if ( choixannee.getSelectedItem() == "2019" && e.getSource() == this.continuer) {
+			String annee = new String("2019");
+			new CalendarFrame(annee);
+		}
+		
+		if ( choixannee.getSelectedItem() == "2020" && e.getSource() == this.continuer) {
+			String annee = new String("2020");
+			new CalendarFrame(annee);
+		}
+		
+		if ( choixannee.getSelectedItem() == "2021" && e.getSource() == this.continuer) {
+			String annee = new String("2021");
+			new CalendarFrame(annee);
+		}
+		
+		if ( choixannee.getSelectedItem() == "2022" && e.getSource() == this.continuer) {
+			String annee = new String("2022");
+			new CalendarFrame(annee);
+		}
+		
+		if ( choixannee.getSelectedItem() == "2023" && e.getSource() == this.continuer) {
+			String annee = new String("2023");
+			new CalendarFrame(annee);
+		}
+
 	}
 }
