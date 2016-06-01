@@ -12,6 +12,7 @@ public class Application {
 		System.out.printf("Please enter a end Year\n");
 		endYear=sc1.nextInt();
 		Calendrier Calendar1 = new Calendrier(beginYear,endYear);
+		
 		System.out.printf("What do you want to do?\n");
 		System.out.printf("[showMonth] [addEvent]\n");
 		
