@@ -4,18 +4,9 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class ImagePanel extends JPanel {
-	 
-    private static final long serialVersionUID = 1L;
- 
-    public static void main(String[] args) {
-    	MainFrame frame = new MainFrame();
-    }
  
     private Image img;
      

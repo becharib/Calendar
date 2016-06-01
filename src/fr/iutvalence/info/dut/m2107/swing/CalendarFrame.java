@@ -1,16 +1,14 @@
 package fr.iutvalence.info.dut.m2107.swing;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
-public class CalendarFrame extends JFrame {
+public class CalendarFrame extends JFrame implements ActionListener {
 	
 	Button january;
 	Button february;
@@ -49,10 +47,16 @@ public class CalendarFrame extends JFrame {
 		november = new Button("November");
 		december = new Button("December");
 		
-		ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/precedent.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/back.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 		precedent = new Button(precedentIcon);
 		ImageIcon quitterIcon = new ImageIcon(new ImageIcon("img/quitter.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 		quitter = new Button(quitterIcon);
+		quitter.setBounds(950,730,30,30);
+		precedent.setBounds(20,730,30,30);
+		quitter.setBorderPainted(false);
+        quitter.setContentAreaFilled(false);
+        precedent.setBorderPainted(false);
+        precedent.setContentAreaFilled(false);
 		
 		this.add(january);
 		this.add(february);
@@ -66,6 +70,8 @@ public class CalendarFrame extends JFrame {
 		this.add(october);
 		this.add(november);
 		this.add(december);
+		this.add(precedent);
+		this.add(quitter);
 		
 		january.setBounds(100,100,200,200);
 		february.setBounds(300,100,200,200);
@@ -79,6 +85,22 @@ public class CalendarFrame extends JFrame {
 		october.setBounds(300,500,200,200);
 		november.setBounds(500,500,200,200);
 		december.setBounds(700,500,200,200);
+		
+		this.quitter.addActionListener(this);
+		this.precedent.addActionListener(this);
 	    
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e1) {
+		
+		if (e1.getSource() == this.quitter) {
+			System.exit(0);
+		}
+		
+		if (e1.getSource() == this.precedent) {
+			this.dispose();
+			new MainFrame();
+		}
 	}
 }
