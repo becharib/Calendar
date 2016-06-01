@@ -12,8 +12,8 @@ import javax.swing.JFrame;
 
 public class MainFrame extends JFrame implements ActionListener {
     
-    JButton bouton;
-    JButton quitterButton;
+	private JButton bouton;
+    private JButton quitterButton;
      
     public MainFrame() {
         this.setTitle("CalendarApplication");
@@ -50,8 +50,7 @@ public class MainFrame extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getSource() == this.bouton) {
-			this.dispose();
-			new CalendarFrame();
+			new MenuComboBox();
 		}
 			 
 		if (e.getSource() == this.quitterButton)

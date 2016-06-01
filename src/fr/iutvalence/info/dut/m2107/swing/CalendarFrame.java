@@ -10,20 +10,20 @@ import javax.swing.JFrame;
 
 public class CalendarFrame extends JFrame implements ActionListener {
 	
-	Button january;
-	Button february;
-	Button march;
-	Button april;
-	Button may;
-	Button june;
-	Button july;
-	Button august;
-	Button september;
-	Button october;
-	Button november;
-	Button december;
-	Button precedent;
-	Button quitter;
+	private Button january;
+	private Button february;
+	private Button march;
+	private Button april;
+	private Button may;
+	private Button june;
+	private Button july;
+	private Button august;
+	private Button september;
+	private Button october;
+	private Button november;
+	private Button december;
+	private Button precedent;
+	private Button quitter;
 	
 	public CalendarFrame() {
 		this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
