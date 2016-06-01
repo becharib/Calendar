@@ -1,18 +1,12 @@
 package fr.iutvalence.info.dut.m2107;
-/*import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
-import java.util.Scanner;*/
 import java.util.*;
 
 public class Calendrier {
 
 	private List<Year> yearList = new ArrayList<Year>();
 	
-	private Date dateDebutDefaut = new Date(1,1,2000);
-	private Date dateFinDefaut = new Date(31,12,2027);
-	private int beginYear;
-	private int EndYear;
+	/*private Date dateDebutDefaut = new Date(1,1,2000);
+	private Date dateFinDefaut = new Date(31,12,2027);*/
 	private static final int YEAR_DEFAULT=2000;
 
 
@@ -22,6 +16,7 @@ public class Calendrier {
 		System.out.println("Donnez l'annee souhaitee");
 		int year= scanner.nextInt();
 		yearList.add(new Year(year));
+		scanner.close();
 	}
 
 	

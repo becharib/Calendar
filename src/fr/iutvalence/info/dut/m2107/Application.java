@@ -1,5 +1,4 @@
 package fr.iutvalence.info.dut.m2107;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Application {
