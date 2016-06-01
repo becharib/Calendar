@@ -1,5 +1,4 @@
 package fr.iutvalence.info.dut.m2107;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Application {
@@ -12,6 +11,7 @@ public class Application {
 		System.out.printf("Please enter a end Year\n");
 		endYear=sc1.nextInt();
 		Calendrier Calendar1 = new Calendrier(beginYear,endYear);
+		
 		System.out.printf("What do you want to do?\n");
 		System.out.printf("[showMonth] [addEvent]\n");
 		

@@ -11,8 +11,12 @@ public class Year {
 	public Year(int numero){
 		this.num=numero;
 		int i=0;
-		for(int k=1;i < LENGTH;k++){
+		int k=1;
+		for(k=1;k < LENGTH+1;k++){
+			
 			year[i] = new Month(k,this.num);
+			System.out.println(year[i]);
+			i++;
 		
 		}
 	}
