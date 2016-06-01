@@ -85,10 +85,15 @@ public class Month {
 	
 
 	public static void showMonth(Month month){
+		System.out.println("Month: "+month.name);
 		for(int i=1;i<=month.day;i++){
 			month.month[i]= new Date(i,month.num,month.year);
-			System.out.println("Day " + i + "[Event:  ]");
+			if(month.month[i].getpublicHoliday())
+				System.out.println("Day " + i + "[Event:  ]" + "Public Holiday");
+			else
+				System.out.println("Day " + i + "[Event:  ]");
 		}
+		System.out.println("\n******************************");
 	}
 	
 	public static int getNum(Month month){

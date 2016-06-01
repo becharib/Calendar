@@ -10,18 +10,19 @@ public class Year {
 	
 	public Year(int numero){
 		this.num=numero;
-		int i=0;
-		int k=1;
-		for(k=1;k < LENGTH+1;k++){
-			
-			year[i] = new Month(k,this.num);
-			System.out.println(year[i]);
-			i++;
-		
+		for(int k=1,i=0;k < LENGTH+1;k++,i++){
+			year[i] = new Month(k,this.num);	
 		}
 	}
 	public Month[] getYear() {
 		return year;
+	}
+	
+	public void showYear(){
+		System.out.println("Year: "+num);
+		for(int i=0; i<LENGTH; i++){
+			Month.showMonth(year[i]);
+		}
 	}
 
 }

@@ -111,13 +111,13 @@ public class Date{
 	}
 
 
-	public String getDate(Date date) {
+	public static String getDate(Date date) {
 		// TODO - implement Date.obtenirLaRepresentationTexte
-		if(this.publicHoliday){
-			return (this.j + "/" + this.m + "/" + this.a + " , Jour férié");
+		if(date.publicHoliday){
+			return (date.j + "/" + date.m + "/" + date.a + " , publicHoliday");
 		}
 		else{
-			return (this.j + "/" + this.m + "/" + this.a + " , Jour non férié");
+			return (date.j + "/" + date.m + "/" + date.a );
 		}
 	}
 }

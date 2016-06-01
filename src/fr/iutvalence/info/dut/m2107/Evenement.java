@@ -11,9 +11,7 @@ public class Evenement {
 	}
 	
 	public static void showEvent(Evenement event){
-		System.out.printf("Place: %s",event.place);
-		System.out.printf(" ");
-		System.out.printf("Place: %d",event.hour);
+		System.out.printf("\nPlace: "+event.place+"Hour: %d"+event.hour);
 		
 	}
 

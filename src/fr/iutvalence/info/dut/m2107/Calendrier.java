@@ -13,7 +13,7 @@ public class Calendrier {
 	
 	public Calendrier() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Donnez l'annee souhaitee");
+		System.out.println("Please enter the begin year.");
 		int year= scanner.nextInt();
 		yearList.add(new Year(year));
 		scanner.close();
@@ -87,25 +87,6 @@ public class Calendrier {
 		
 	}
 
-	public static void createMonth(){
-		Scanner sc1 = new Scanner(System.in);
-		Scanner sc2 = new Scanner(System.in);
-		int numMonth=0;
-		String month="";
-		
-		System.out.printf("Year ? Exemple : 2016 \n");
-		String yearString = sc1.nextLine();
-		int year = Integer.parseInt(yearString); 
-		sc1.close();
-		System.out.printf("Month ? Exemple : July \n");	
-		month = sc2.nextLine();
-		numMonth=ConvertMonth(month);
-	
-		sc2.close();
-		System.out.printf("[%s,%d]\n", month, year);
-		Month.showMonth(new Month(numMonth, year));
-	
-	}
 
 	/**
 	 * 
@@ -116,9 +97,10 @@ public class Calendrier {
 		throw new UnsupportedOperationException();
 	}
 
-	public void afficherCalendrier() {
-		// TODO - implement Calendrier.afficherCalendrier
-		throw new UnsupportedOperationException();
+	public void showCalendar() {
+		for(Year year : yearList){
+			year.showYear();
+		}
 	}
 
 	/**
