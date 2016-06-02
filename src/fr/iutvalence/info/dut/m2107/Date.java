@@ -9,39 +9,15 @@ public class Date{
 	private int d;
 	private int m;
 	private int y;
-	private PublicHoliday publicHoliday;
-	static boolean isPublicHoliday;
+	private String publicHoliday;
+	private static boolean publicHolidayBool;
 	private Evenement event;
-
-	/*public boolean PublicHoliday(int j, int m){
-		if((j==1) && (m==1))
-			return(true);
-		if((j==28) && (m==3))
-			return(true);
-		if((j==1) && (m==5))
-			return(true);
-		if((j==5) && (m==5))
-			return(true);
-		if((j==8) && (m==5))
-			return(true);
-		if((j==16) && (m==5))
-			return(true);
-		if((j==14) && (m==7))
-			return(true);
-		if((j==1) && (m==11))
-			return(true);
-		if((j==25) && (m==12))
-			return(true);
-		
-		return(false);
-		
-	}*/
 	
 	public Date() {
 		this.d=dDefault;
 		this.m=mDefault;
 		this.y=yDefault;
-		this.publicHoliday = PublicHoliday.newYear;
+		this.publicHoliday = PublicHoliday.getPublicHoliday(1,1);
 	}
 
 	/**
@@ -54,15 +30,12 @@ public class Date{
 		this.d = d;
 		this.m = m;
 		this.y = y;
-		for (PublicHoliday pH : PublicHoliday.values()){
-			if ((pH.getDay()==d)&&(pH.getMonth()==m)){
-				this.publicHoliday = pH;
-				this.isPublicHoliday = true;
-			}
-		}
-		if (this.publicHoliday == null)
-			this.isPublicHoliday = false;
-	}
+		this.publicHoliday = PublicHoliday.getPublicHoliday(d,m);
+		if (this.publicHoliday!=null)
+			Date.publicHolidayBool=true;
+		else 
+			Date.publicHolidayBool=false;
+	}	
 	
 
 	public int getDay() {
@@ -76,54 +49,52 @@ public class Date{
 	public int getYear() {
 		return this.y;
 	}
-	public String getpublicHoliday() {
-		return this.publicHoliday.getName();
+	public String getPublicHoliday() {
+		return this.publicHoliday;
 	}
 	
 	public boolean isPublicHoliday() {
-		return this.isPublicHoliday;
+		return Date.isPublicHolidayBool();
 	}
 	
-	public static Evenement getEvent(Date date){
-		return date.event;
+	public Evenement getEvent(){
+		return this.event;
 	}
 	
 	public static void addEvent(Date date, Evenement event){
 		date.event=event;
 	}
-	
 
 	/**
 	 * 
 	 * @param date
 	 */
-	public Evenement consulterEvenement(Date date) {
-		return(this.event);
+	public Evenement showEvent(Date date) {
+		return(date.event);
 	}
 	
 	
 
-	public void supprimerEvenement(Date date) {
-		this.event.place="";
-		this.event.name="";
-		throw new UnsupportedOperationException();
+	public void deleteEvent(Date date) {
+		date.event = null;
 	}
 
 	/**
 	 * 
 	 * @param evenement
 	 */
-	public void modifierEvenement(Evenement evenement) {
+	/*public void changeEvent(Evenement evenement) {
 		this.event.place=evenement.place;
 		this.event.name=evenement.name;
 		throw new UnsupportedOperationException();
+	}*/
+
+	public static boolean isPublicHolidayBool() {
+		return publicHolidayBool;
 	}
 
-
-	public String toString() {
-		if (this.isPublicHoliday())
-			return (this.d + "/" + this.m + "/" + this.y + "/" + this.getpublicHoliday());
-		else 
-			return (this.d + "/" + this.m + "/" + this.y + "/");
+	public static void setPublicHolidayBool(boolean publicHolidayBool) {
+		Date.publicHolidayBool = publicHolidayBool;
 	}
+
 }

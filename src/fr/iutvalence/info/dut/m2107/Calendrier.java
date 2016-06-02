@@ -3,23 +3,10 @@ import java.util.*;
 
 public class Calendrier {
 
-	private List<Year> yearList = new ArrayList<Year>();
-	
-	/*private Date dateDebutDefaut = new Date(1,1,2000);
-	private Date dateFinDefaut = new Date(31,12,2027);*/
-	private static final int YEAR_DEFAULT=2000;
+	private static List<Year> yearList = new ArrayList<Year>();
 
 
-	
-	public Calendrier() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please enter the begin year.");
-		int year= scanner.nextInt();
-		yearList.add(new Year(year));
-		scanner.close();
-	}
 
-	
 	/**
 	 * 
 	 * @param dateDebut
@@ -29,62 +16,67 @@ public class Calendrier {
 		for(int i=beginYear;i<endYear;i++){
 			yearList.add(new Year(i));
 		}
-		
-		//yearList.get(0).getMonth().get
-		//throw new UnsupportedOperationException();
 	}
-	
-	
+
+
 	public static int ConvertMonth(String month){
 		int numMonth=0;
 		while(numMonth==0){
 
 			switch (month)
 			{
-			  case "January":
-				  numMonth=1;
-			    break;
-			  case "February":
-				  numMonth=2;
-			    break;
-			  case "March":
-				  numMonth=3;
-			    break;
-			  case "April":
-				  numMonth=4;
-			    break;
-			  case "May":
-				  numMonth=5;
-			    break;
-			  case "June":
-				  numMonth=6;
-			    break;
-			  case "July":
-				  numMonth=7;
-			    break;
-			  case "August":
-				  numMonth=8;
-			    break;
-			  case "September":
-				  numMonth=9;
-			    break;
-			  case "October":
-				  numMonth=10;
-			    break;
-			  case "November":
-				  numMonth=11;
-			    break;
-			  case "December":
-				  numMonth=12;
-			    break;
-			  default:
-				  System.out.println("Please enter the month again");
+			case "January":
+				numMonth=1;
+				break;
+			case "February":
+				numMonth=2;
+				break;
+			case "March":
+				numMonth=3;
+				break;
+			case "April":
+				numMonth=4;
+				break;
+			case "May":
+				numMonth=5;
+				break;
+			case "June":
+				numMonth=6;
+				break;
+			case "July":
+				numMonth=7;
+				break;
+			case "August":
+				numMonth=8;
+				break;
+			case "September":
+				numMonth=9;
+				break;
+			case "October":
+				numMonth=10;
+				break;
+			case "November":
+				numMonth=11;
+				break;
+			case "December":
+				numMonth=12;
+				break;
+			default:
+				System.out.println("Please enter the month again");
 			}
-			
-			
+
+
 		}
 		return(numMonth);
-		
+
+	}
+	
+	public Year getYear(int year){
+		for(int i = 0; i<this.yearList.size(); i++){
+			if(this.yearList.get(i).getNum()==year)
+				return this.yearList.get(i);
+		}
+		return null;
 	}
 
 
@@ -135,6 +127,6 @@ public class Calendrier {
 		// TODO - implement Calendrier.modifierEvenement
 		throw new UnsupportedOperationException();
 	}*/
-		
+
 
 }

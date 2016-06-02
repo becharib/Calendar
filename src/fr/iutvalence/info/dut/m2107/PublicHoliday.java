@@ -1,5 +1,6 @@
 package fr.iutvalence.info.dut.m2107;
 
+
 public enum PublicHoliday {
 	newYear(1,1,"newYear"),
 	easterMonday(28,3,"easterMonday"),
@@ -10,25 +11,25 @@ public enum PublicHoliday {
 	allSaintsDay(1,11,"allSaintsDay"),
 	armistice(11,11,"armistice"),
 	christmas(25,12,"christmas");
-	
-	private int day;
-	private int month;
+
+	int day;
+	int month;
 	private String name;
-	
+
 	PublicHoliday(int day, int month, String name){
 		this.day = day;
 		this.month = month;
 		this.name = name;
 	}
-	
-	public int getDay(){
-		return this.day;
+
+	public static String getPublicHoliday(int d, int m){
+		for (PublicHoliday pH : PublicHoliday.values()) {
+			if ((d==pH.day)&&(m==pH.month))
+				return pH.name;
+		}
+		return null;
 	}
-	
-	public int getMonth(){
-		return this.month;
-	}
-	
+
 	public String getName(){
 		return this.name();
 	}

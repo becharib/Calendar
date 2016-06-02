@@ -14,8 +14,11 @@ public class Year {
 			year[i] = new Month(k,this.num);	
 		}
 	}
-	public Month[] getYear() {
+	public Month[] getMonths() {
 		return year;
+	}
+	public int getNum(){
+		return this.num;
 	}
 	
 	public void showYear(){
