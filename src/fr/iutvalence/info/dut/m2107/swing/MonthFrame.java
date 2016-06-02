@@ -3,6 +3,7 @@ package fr.iutvalence.info.dut.m2107.swing;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ public class MonthFrame extends JFrame implements ActionListener {
 	private int joursint;
 	private String jourstring;
 	private JLabel label;
+	Button back;
+	Button exit;
 	
 	public MonthFrame(int joursint, String mois, String annee){
 		
@@ -194,13 +197,37 @@ public class MonthFrame extends JFrame implements ActionListener {
 		label.setForeground(new Color(215,90,90));
 		label.setFont(f);
 		this.add(label);
+		
+		ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/back.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		back = new Button(precedentIcon);
+		ImageIcon quitterIcon = new ImageIcon(new ImageIcon("img/quitter.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		exit = new Button(quitterIcon);
+		exit.setBounds(950,730,30,30);
+		back.setBounds(20,730,30,30);
+		exit.setBorderPainted(false);
+        exit.setContentAreaFilled(false);
+        back.setBorderPainted(false);
+        back.setContentAreaFilled(false);
+		
+		this.add(back);
+		this.add(exit);
+		
+		this.exit.addActionListener(this);
+		this.back.addActionListener(this);
 	    
 	    this.setVisible(true);
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		
+		if (e.getSource() == this.back) {
+			this.dispose();
+		}
+		
+		if (e.getSource() == this.exit) {
+			System.exit(0);
+		}
 		
 	}
 }

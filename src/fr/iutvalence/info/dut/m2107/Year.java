@@ -20,6 +20,10 @@ public class Year {
 	public int getNum(){
 		return this.num;
 	}
+	
+	public Month[] getMonthTab(){
+		return this.year;
+	}
 
 	public void showYear(){
 		System.out.println("Year: "+num);

@@ -138,6 +138,9 @@ public class Month {
 		return this.month;
 	}
 
+	public int getNbDay() {
+		return nbDay;
+	}
 
 
 
