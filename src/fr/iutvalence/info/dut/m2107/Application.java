@@ -21,15 +21,15 @@ public class Application {
 			str = sc.nextLine();
 			switch (str){
 			case "addEvent":
-				System.out.printf("Wich Year ? Exemple: 2016");
+				System.out.printf("Which Year ? Exemple: 2016");
 				String yearString = sc.nextLine();
 				int year = Integer.parseInt(yearString);
 
-				System.out.printf("Wich Month ? Exemple: 11");
+				System.out.printf("Which Month ? Exemple: 11");
 				String monthString = sc.nextLine();
 				int month = Integer.parseInt(monthString);
 
-				System.out.printf("Wich Day ? Exemple: 2");
+				System.out.printf("Which Day ? Exemple: 2");
 				String dayString = sc.nextLine();
 				int day = Integer.parseInt(dayString);
 
