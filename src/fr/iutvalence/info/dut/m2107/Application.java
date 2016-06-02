@@ -1,17 +1,21 @@
 package fr.iutvalence.info.dut.m2107;
 import java.util.Scanner;
 
+import fr.iutvalence.info.dut.m2107.swing.MainFrame;
+
 public class Application {
 	
+	static int endYear;
+	
 	public static void main(String[] args){
-		int beginYear,endYear;
+		
 		Scanner sc1 = new Scanner(System.in);
-		System.out.printf("Please enter a begin Year\n");
-		beginYear=sc1.nextInt();
 		System.out.printf("Please enter a end Year\n");
 		endYear=sc1.nextInt();
-		Calendrier Calendar1 = new Calendrier(beginYear,endYear);
+		Calendrier Calendar1 = new Calendrier(2016,endYear);
 		Calendar1.showCalendar();
+		new MainFrame();
+		sc1.close();
 		
 		/*System.out.printf("What do you want to do?\n");
 		System.out.printf("[showMonth] [addEvent]\n");
