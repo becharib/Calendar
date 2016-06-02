@@ -14,7 +14,7 @@ public class MenuComboBox extends JFrame implements ActionListener {
 	
 	private Button valider;
 	private MainFrame frame;
-	private JComboBox<String> choixannee;
+	static JComboBox<String> choixannee;
 	private JLabel label;
 	private Button back;
 	private Button continuer;
