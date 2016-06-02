@@ -1,12 +1,28 @@
 package fr.iutvalence.info.dut.m2107;
 
+/**
+ * Class to defin a Month with :
+ * -a table of days (month)
+ * -the number of the current month (num)
+ * -the year of the current month(year)
+ * -the name of the month (name)
+ * -the number of days of the  Month (nbDay)
+ * @author William
+ *
+ */
+
 public class Month {
 	private int nbDay;
 	private String name;
 	private int year;
 	private int num;
 	private Date[] month;
-
+	
+	/**
+	 * 
+	 * Constructor to set the year of the Month and the other attributes with a switch
+	 * to have the corresponding number of days, number of the month, name, and table for each Month
+	 */
 	public Month(int num, int year){
 		this.year=year;
 
@@ -19,6 +35,10 @@ public class Month {
 			this.name="January";
 			break;
 		case 2:
+			/**
+			 * the if to set the right number of days of the current month
+			 * if his year is a leap year or not
+			 */
 			if(((year%4 == 0)&&(year%100 != 0))||(year%400 ==0)){
 				this.nbDay=29;  
 			}
@@ -121,19 +141,35 @@ public class Month {
 		}
 		System.out.println("\n******************************");
 	}
+	
+	/**
+	 * 
+	 * get the number of the current month
+	 */
 
 	public int getNum(){
 		return this.num;
 	}
+	/**
+	 * 
+	 * get a day 
+	 */
 
 	public Date getDay(int day){
 		return this.month[day];
 	}
+	/**
+	 * 
+	 * get the name of the current month
+	 */
 
 	public String getName() {
 		return this.name;
 	}
-
+/**
+ * 
+ * get the table of dates
+ */
 	public Date[] getDate(){
 		return this.month;
 	}

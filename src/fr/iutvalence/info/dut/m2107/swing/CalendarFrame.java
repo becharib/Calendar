@@ -165,5 +165,14 @@ public class CalendarFrame extends JFrame implements ActionListener {
 			generateActionwithCalendar(e1, MenuComboBox.choixannee.getSelectedItem());
 		}
 	
-	//if()
-}
+	
+	/* POUR BILAL : POUR AFFICHER LES JOURS FERIES DIFFEREMMENT
+	 * for(int i=2016;i<2024;i++){
+		for(int j=0;j<12;j++){
+			for(int k=0;k<calendrier.getYear(i).getMonthTab()[j].getNbDay(); k++){
+				if(calendrier.getYear(i).getMonthTab()[j].getDay(k).isPublicHolidayBool()){
+					//afficher case d'une couleur différente
+				}
+			}
+		}*/
+	}

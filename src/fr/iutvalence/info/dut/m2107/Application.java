@@ -7,7 +7,7 @@ public class Application {
 
 	public static void main(String[] args){
 		
-		Calendrier calendar1 = new Calendrier(beginYear,endYear);
+		Calendrier calendar1 = new Calendrier(beginYear,endYear+1);
 		
 		System.out.printf("\nWhat do you want to do ?");
 		System.out.printf("[showCalendar] [changeEvent]");

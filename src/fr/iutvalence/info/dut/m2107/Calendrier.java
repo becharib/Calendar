@@ -1,10 +1,18 @@
 package fr.iutvalence.info.dut.m2107;
 import java.util.*;
-
+/**
+ * Class which have an ArrayList of Years(yearList)
+ * @author William
+ *
+ */
 public class Calendrier {
 
 	private List<Year> yearList = new ArrayList<Year>();
-
+	
+	/**
+	 * 
+	 * Constructor to create the calendar between "beginYear" and "endYear" by set the ArrayList yearList
+	 */
 	public Calendrier(int beginYear, int endYear) {
 		for(int i=beginYear;i<endYear;i++){
 			getYearList().add(new Year(i));
