@@ -75,41 +75,49 @@ public class MenuComboBox extends JFrame implements ActionListener {
 		if ( choixannee.getSelectedItem() == "2016" && e.getSource() == this.continuer) {
 			String annee = new String("2016");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 			
 		if ( choixannee.getSelectedItem() == "2017" && e.getSource() == this.continuer) {
 			String annee = new String("2017");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 		
 		if ( choixannee.getSelectedItem() == "2018" && e.getSource() == this.continuer) {
 			String annee = new String("2018");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 		
 		if ( choixannee.getSelectedItem() == "2019" && e.getSource() == this.continuer) {
 			String annee = new String("2019");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 		
 		if ( choixannee.getSelectedItem() == "2020" && e.getSource() == this.continuer) {
 			String annee = new String("2020");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 		
 		if ( choixannee.getSelectedItem() == "2021" && e.getSource() == this.continuer) {
 			String annee = new String("2021");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 		
 		if ( choixannee.getSelectedItem() == "2022" && e.getSource() == this.continuer) {
 			String annee = new String("2022");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 		
 		if ( choixannee.getSelectedItem() == "2023" && e.getSource() == this.continuer) {
 			String annee = new String("2023");
 			new CalendarFrame(annee);
+			this.dispose();
 		}
 
 	}

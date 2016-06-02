@@ -64,6 +64,16 @@ public class Button extends JButton{
 		this.setBackground(new Color(215,90,90));
 	}
 	
+	public Button(int num){
+		super(Integer.toString(num));
+		this.setFocusPainted(false);
+		this.setBorderPainted(true);
+		this.setContentAreaFilled(true);
+		this.setLayout(null);
+		this.setForeground(Color.BLACK);
+		this.setBackground(new Color(215,90,90));
+	}
+	
 	public Button(ImageIcon img, String text) {
 		super(text);
 		this.setIcon(img);
