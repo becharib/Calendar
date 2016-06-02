@@ -80,53 +80,10 @@ public class Calendrier {
 	}
 
 
-	/**
-	 * 
-	 * @param dateDuJour
-	 */
-	public void miseAJourCalendrier(Date dateDuJour) {
-		// TODO - implement Calendrier.miseAJourCalendrier
-		throw new UnsupportedOperationException();
-	}
-
 	public void showCalendar() {
 		for(Year year : yearList){
 			year.showYear();
 		}
 	}
-
-	/**
-	 * 
-	 * @param evenement
-	 */
-	/*public void entrerEvenement(Evenement evenement, Date date) {
-		// TODO - implement Calendrier.entrerEvenement
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param date
-	 */
-	/*public Evenement consulterEvenement(Date date) {
-		// TODO - implement Calendrier.consulterEvenement
-		throw new UnsupportedOperationException();
-	}
-
-	public void supprimerEvenement(Date date) {
-		// TODO - implement Calendrier.supprimerEvenement
-		yearList.get(year[month[day].event.place])=null;
-		throw new UnsupportedOperationException();
-	}*/
-
-	/**
-	 * 
-	 * @param evenement
-	 */
-	/*public void modifierEvenement(Evenement evenement) {
-		// TODO - implement Calendrier.modifierEvenement
-		throw new UnsupportedOperationException();
-	}*/
-
 
 }

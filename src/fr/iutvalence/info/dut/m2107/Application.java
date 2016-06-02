@@ -11,15 +11,10 @@ public class Application {
 		
 		
 		Calendrier calendar1 = new Calendrier(beginYear,endYear);
-		Evenement event = new Evenement("Anniv","Valence");
-		Year y = calendar1.getYear(2018);
-		Month m = y.getMonths()[3];
-		Date d = Month.getDay(m, 3);
-		//Date d = new Date(2,2,2017);
-		Date date1 = new Date(1,1,2020);
-		date1.addEvent(event);
+		//Date date = calendar1.getYear(2017).getMonths(11).getDay(25); 
+		//System.out.print(date.getPublicHoliday());
 		
-		/*System.out.printf("\nWhat do you want to do ?");
+		System.out.printf("\nWhat do you want to do ?");
 		System.out.printf("[showCalendar] [changeEvent]");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
@@ -35,11 +30,11 @@ public class Application {
 				String yearString = sc.nextLine();
 				int year = Integer.parseInt(yearString);
 				
-				System.out.printf("Wich Month ? Exemple: January");
+				System.out.printf("Wich Month ? Exemple: 11");
 				String monthString = sc.nextLine();
 				int month = Integer.parseInt(monthString);
 				
-				System.out.printf("Wich Day ?");
+				System.out.printf("Wich Day ? Exemple: 2");
 				String dayString = sc.nextLine();
 				int day = Integer.parseInt(dayString);
 				
@@ -49,16 +44,18 @@ public class Application {
 				String place = sc.nextLine();
 				Evenement event = new Evenement(name,place);
 				
-				Year y = calendar1.getYear(year);
-				Month m = y.getMonths()[month];
-				Date d = m.getDate()[day]; 
-				
-				d.addEvent(event);
+				Date date = calendar1.getYear(year).getMonths(month).getDay(day); 
+				date.addEvent(event);
+			break;
+			case "changeEvent":
+			break;
+			case "deleteEvent":
+			break;
 			}
-		}*/
+		}
 		
 		calendar1.showCalendar();
-		new MainFrame();
+		//new MainFrame();
 
 
 	}

@@ -14,8 +14,8 @@ public class Year {
 			year[i] = new Month(k,this.num);	
 		}
 	}
-	public Month[] getMonths() {
-		return year;
+	public Month getMonths(int m) {
+		return this.year[m-1];
 	}
 	public int getNum(){
 		return this.num;
@@ -24,7 +24,7 @@ public class Year {
 	public void showYear(){
 		System.out.println("Year: "+num);
 		for(int i=0; i<LENGTH; i++){
-			Month.showMonth(year[i]);
+			year[i].showMonth();
 		}
 	}
 

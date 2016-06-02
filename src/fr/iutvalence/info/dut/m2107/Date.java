@@ -3,23 +3,13 @@ package fr.iutvalence.info.dut.m2107;
 
 public class Date{
 
-	public int dDefault = 1;
-	public int mDefault = 1;
-	public int yDefault = 2000;
 	private int d;
 	private int m;
 	private int y;
 	private String publicHoliday;
-	private static boolean publicHolidayBool;
+	private boolean publicHolidayBool;
 	private Evenement event;
 	
-	public Date() {
-		this.d=dDefault;
-		this.m=mDefault;
-		this.y=yDefault;
-		this.publicHoliday = PublicHoliday.getPublicHoliday(1,1);
-		this.event = null;
-	}
 
 	/**
 	 * 
@@ -32,10 +22,10 @@ public class Date{
 		this.m = m;
 		this.y = y;
 		this.publicHoliday = PublicHoliday.getPublicHoliday(d,m);
-		if (this.publicHoliday!=null)
-			Date.publicHolidayBool=true;
+		if (this.publicHoliday==null)
+			this.publicHolidayBool=false;
 		else 
-			Date.publicHolidayBool=false;
+			this.publicHolidayBool=true;
 		this.event = null;
 	}	
 	
@@ -55,7 +45,7 @@ public class Date{
 	}
 	
 	public boolean isPublicHoliday() {
-		return Date.isPublicHolidayBool();
+		return this.isPublicHolidayBool();
 	}
 	
 	public Evenement getEvent(){
@@ -66,36 +56,12 @@ public class Date{
 		this.event=event;
 	}
 
-	/**
-	 * 
-	 * @param date
-	 */
-	public Evenement showEvent(Date date) {
-		return(date.event);
-	}
-	
-	
-
 	public void deleteEvent(Date date) {
 		date.event = null;
 	}
 
-	/**
-	 * 
-	 * @param evenement
-	 */
-	/*public void changeEvent(Evenement evenement) {
-		this.event.place=evenement.place;
-		this.event.name=evenement.name;
-		throw new UnsupportedOperationException();
-	}*/
-
-	public static boolean isPublicHolidayBool() {
-		return publicHolidayBool;
-	}
-
-	public static void setPublicHolidayBool(boolean publicHolidayBool) {
-		Date.publicHolidayBool = publicHolidayBool;
+	public boolean isPublicHolidayBool() {
+		return this.publicHolidayBool;
 	}
 
 }

@@ -11,7 +11,7 @@ public class Evenement {
 	}
 	
 	public String showEvent(){
-		return ("\n name: %d"+this.name + "Place: "+this.place);
+		return ("Name: "+this.name + " Place: "+this.place);
 		
 	}
 
