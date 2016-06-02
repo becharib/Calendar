@@ -3,15 +3,15 @@ package fr.iutvalence.info.dut.m2107;
 public class Evenement {
 
 	String place;
-	int hour;
+	String name;
 
-	public Evenement(String place, int hour) {
+	public Evenement(String place, String name) {
 		this.place=place;
-		this.hour=hour;
+		this.name=name;
 	}
 	
 	public static void showEvent(Evenement event){
-		System.out.printf("\nPlace: "+event.place+"Hour: %d"+event.hour);
+		System.out.printf("\nPlace: "+event.place+"name: %d"+event.name);
 		
 	}
 

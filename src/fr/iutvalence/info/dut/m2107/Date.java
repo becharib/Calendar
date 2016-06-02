@@ -98,16 +98,14 @@ public class Date{
 	 * @param date
 	 */
 	public Evenement consulterEvenement(Date date) {
-		// TODO - implement Calendrier.consulterEvenement
 		return(this.event);
 	}
 	
 	
 
 	public void supprimerEvenement(Date date) {
-		// TODO - implement Calendrier.supprimerEvenement
 		this.event.place="";
-		this.event.hour=0;
+		this.event.name="";
 		throw new UnsupportedOperationException();
 	}
 
@@ -116,8 +114,8 @@ public class Date{
 	 * @param evenement
 	 */
 	public void modifierEvenement(Evenement evenement) {
-		// TODO - implement Calendrier.modifierEvenement
-		
+		this.event.place=evenement.place;
+		this.event.name=evenement.name;
 		throw new UnsupportedOperationException();
 	}
 
