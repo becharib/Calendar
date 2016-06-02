@@ -88,7 +88,7 @@ public class Month {
 		System.out.println("Month: "+month.name);
 		for(int i=1;i<=month.day;i++){
 			month.month[i]= new Date(i,month.num,month.year);
-			if(month.month[i].isPublicHoliday)
+			if(month.month[i].isPublicHoliday()==true)
 				System.out.println("Day " + i + "[Event:  ]" + "Public Holiday");
 			else
 				System.out.println("Day " + i + "[Event:  ]");
