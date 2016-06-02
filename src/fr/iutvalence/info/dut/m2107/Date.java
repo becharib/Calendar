@@ -3,16 +3,17 @@ package fr.iutvalence.info.dut.m2107;
 
 public class Date{
 
-	public int jDefaut = 1;
-	public int mDefaut = 1;
-	public int aDefaut = 2000;
-	private int j;
+	public int dDefault = 1;
+	public int mDefault = 1;
+	public int yDefault = 2000;
+	private int d;
 	private int m;
-	private int a;
-	private boolean publicHoliday=false;
+	private int y;
+	private PublicHoliday publicHoliday;
+	static boolean isPublicHoliday;
 	private Evenement event;
 
-	public boolean PublicHoliday(int j, int m){
+	/*public boolean PublicHoliday(int j, int m){
 		if((j==1) && (m==1))
 			return(true);
 		if((j==28) && (m==3))
@@ -34,43 +35,53 @@ public class Date{
 		
 		return(false);
 		
-	}
+	}*/
 	
 	public Date() {
-		this.j=jDefaut;
-		this.m=mDefaut;
-		this.a=aDefaut;
-		this.publicHoliday = PublicHoliday(jDefaut, mDefaut);
-		throw new UnsupportedOperationException();
+		this.d=dDefault;
+		this.m=mDefault;
+		this.y=yDefault;
+		this.publicHoliday = PublicHoliday.newYear;
 	}
 
 	/**
 	 * 
-	 * @param j
+	 * @param d
 	 * @param m
-	 * @param a
+	 * @param y
 	 */
-	public Date(int j0, int m0, int a0) {
-		this.j = j0;
-		this.m = m0;
-		this.a = a0;
-		this.publicHoliday = PublicHoliday(j0, m0);
+	public Date(int d, int m, int y) {
+		this.d = d;
+		this.m = m;
+		this.y = y;
+		for (PublicHoliday pH : PublicHoliday.values()){
+			if ((pH.getDay()==d)&&(pH.getMonth()==m)){
+				this.publicHoliday = pH;
+				this.isPublicHoliday = true;
+			}
+		}
+		if (this.publicHoliday == null)
+			this.isPublicHoliday = false;
 	}
 	
 
-	public int obtenirJ() {
-		return this.j;
+	public int getDay() {
+		return this.d;
 	}
 
-	public int obtenirM() {
+	public int getMonth(){
 		return this.m;
 	}
 
-	public int obtenirA() {
-		return this.a;
+	public int getYear() {
+		return this.y;
 	}
-	public boolean getpublicHoliday() {
-		return this.publicHoliday;
+	public String getpublicHoliday() {
+		return this.publicHoliday.getName();
+	}
+	
+	public boolean isPublicHoliday() {
+		return this.isPublicHoliday;
 	}
 	
 	public static Evenement getEvent(Date date){
@@ -111,13 +122,10 @@ public class Date{
 	}
 
 
-	public static String getDate(Date date) {
-		// TODO - implement Date.obtenirLaRepresentationTexte
-		if(date.publicHoliday){
-			return (date.j + "/" + date.m + "/" + date.a + " , publicHoliday");
-		}
-		else{
-			return (date.j + "/" + date.m + "/" + date.a );
-		}
+	public String toString() {
+		if (this.isPublicHoliday())
+			return (this.d + "/" + this.m + "/" + this.y + "/" + this.getpublicHoliday());
+		else 
+			return (this.d + "/" + this.m + "/" + this.y + "/");
 	}
 }
