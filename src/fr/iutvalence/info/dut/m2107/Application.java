@@ -4,18 +4,15 @@ import java.util.Scanner;
 import fr.iutvalence.info.dut.m2107.swing.MainFrame;
 
 public class Application {
-	
-	static int endYear;
+	public static final int beginYear=2016;
+	public static final int endYear=2023;
 	
 	public static void main(String[] args){
 		
-		Scanner sc1 = new Scanner(System.in);
-		System.out.printf("Please enter a end Year\n");
-		endYear=sc1.nextInt();
-		Calendrier Calendar1 = new Calendrier(2016,endYear);
+		
+		Calendrier Calendar1 = new Calendrier(beginYear,endYear);
 		Calendar1.showCalendar();
 		new MainFrame();
-		sc1.close();
 		
 		/*System.out.printf("What do you want to do?\n");
 		System.out.printf("[showMonth] [addEvent]\n");
