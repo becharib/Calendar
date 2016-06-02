@@ -11,7 +11,15 @@ public class Application {
 		
 		
 		Calendrier calendar1 = new Calendrier(beginYear,endYear);
-		System.out.printf("\nWhat do you want to do ?");
+		Evenement event = new Evenement("Anniv","Valence");
+		Year y = calendar1.getYear(2018);
+		Month m = y.getMonths()[3];
+		Date d = Month.getDay(m, 3);
+		//Date d = new Date(2,2,2017);
+		Date date1 = new Date(1,1,2020);
+		date1.addEvent(event);
+		
+		/*System.out.printf("\nWhat do you want to do ?");
 		System.out.printf("[showCalendar] [changeEvent]");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
@@ -33,7 +41,7 @@ public class Application {
 				
 				System.out.printf("Wich Day ?");
 				String dayString = sc.nextLine();
-				int day = Integer.parseInt(monthString);
+				int day = Integer.parseInt(dayString);
 				
 				System.out.printf("Please enter a name.");
 				String name = sc.nextLine();
@@ -41,16 +49,14 @@ public class Application {
 				String place = sc.nextLine();
 				Evenement event = new Evenement(name,place);
 				
-				//Year y = Calendrier.getYear(year);
-				//Month[] m  = y.getMonths();
-				
 				Year y = calendar1.getYear(year);
 				Month m = y.getMonths()[month];
 				Date d = m.getDate()[day]; 
 				
-				Date.addEvent(d, event);
+				d.addEvent(event);
 			}
-		}
+		}*/
+		
 		calendar1.showCalendar();
 		new MainFrame();
 

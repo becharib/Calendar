@@ -108,9 +108,9 @@ public class Month {
 			}
 			else{
 				if (month.month[i].isPublicHoliday())
-					System.out.println("Day " + i + "[Event:" + event.showEvent() +"]" + PublicHoliday.getPublicHoliday(month.month[i].getDay(),month.month[i].getMonth()));
+					System.out.println("Day " + i + "[Event:" /*+ event.showEvent() */+"]" + PublicHoliday.getPublicHoliday(month.month[i].getDay(),month.month[i].getMonth()));
 				else 
-					System.out.println("Day " + i + "[Event: " + event.showEvent() + "]");
+					System.out.println("Day " + i + "[Event: " /*+ event.showEvent() */ + "]");
 			}
 				
 		}

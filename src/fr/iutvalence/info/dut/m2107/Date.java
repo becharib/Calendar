@@ -18,6 +18,7 @@ public class Date{
 		this.m=mDefault;
 		this.y=yDefault;
 		this.publicHoliday = PublicHoliday.getPublicHoliday(1,1);
+		this.event = null;
 	}
 
 	/**
@@ -35,9 +36,9 @@ public class Date{
 			Date.publicHolidayBool=true;
 		else 
 			Date.publicHolidayBool=false;
+		this.event = null;
 	}	
 	
-
 	public int getDay() {
 		return this.d;
 	}
@@ -61,8 +62,8 @@ public class Date{
 		return this.event;
 	}
 	
-	public static void addEvent(Date date, Evenement event){
-		date.event=event;
+	public void addEvent(Evenement event){
+		this.event=event;
 	}
 
 	/**
