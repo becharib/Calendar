@@ -107,6 +107,11 @@ public class Month {
 	public String getName() {
 		return this.name;
 	}
+	
+	public int getDay() {
+		return day;
+	}
+
 
 	
 
