@@ -6,28 +6,25 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import com.sun.javafx.collections.MappingChange.Map;
+
+import fr.iutvalence.info.dut.m2107.Calendrier;
+
 public class CalendarFrame extends JFrame implements ActionListener {
 	
-	private Button january;
-	private Button february;
-	private Button march;
-	private Button april;
-	private Button may;
-	private Button june;
-	private Button july;
-	private Button august;
-	private Button september;
-	private Button october;
-	private Button november;
-	private Button december;
+	Calendrier calendrier = new Calendrier(2016,2023);
+	
 	private Button precedent;
 	private Button quitter;
 	private JLabel label;
+	
+	private HashMap<String, Button> mapButtons;
 	
 	public CalendarFrame() {
 		this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
@@ -38,18 +35,7 @@ public class CalendarFrame extends JFrame implements ActionListener {
 		this.setVisible(true);
 		this.setLayout(null);
 		
-		january = new Button("January");
-		february = new Button("February");
-		march = new Button("March");
-		april = new Button("April");
-		may = new Button("May");
-		june = new Button("June");
-		july = new Button("July");
-		august = new Button("August");
-		september = new Button("September");
-		october = new Button("October");
-		november = new Button("November");
-		december = new Button("December");
+		this.mapButtons = new HashMap<>();
 		
 		ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/back.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 		precedent = new Button(precedentIcon);
@@ -61,34 +47,45 @@ public class CalendarFrame extends JFrame implements ActionListener {
         quitter.setContentAreaFilled(false);
         precedent.setBorderPainted(false);
         precedent.setContentAreaFilled(false);
-		
-		this.add(january);
-		this.add(february);
-		this.add(march);
-		this.add(april);
-		this.add(may);
-		this.add(june);
-		this.add(july);
-		this.add(august);
-		this.add(september);
-		this.add(october);
-		this.add(november);
-		this.add(december);
+
 		this.add(precedent);
 		this.add(quitter);
+
+		this.mapButtons.put("january", new Button("January"));
+		this.mapButtons.put("february", new Button("February"));
+		this.mapButtons.put("march", new Button("March"));
+		this.mapButtons.put("april", new Button("April"));
+		this.mapButtons.put("may", new Button("May"));
+		this.mapButtons.put("june", new Button("June"));
+		this.mapButtons.put("july", new Button("July"));
+		this.mapButtons.put("august", new Button("August"));
+		this.mapButtons.put("september", new Button("September"));
+		this.mapButtons.put("october", new Button("October"));
+		this.mapButtons.put("november", new Button("November"));
+		this.mapButtons.put("december", new Button("December"));
 		
-		january.setBounds(100,100,200,200);
-		february.setBounds(300,100,200,200);
-		march.setBounds(500,100,200,200);
-		april.setBounds(700,100,200,200);
-		may.setBounds(100,300,200,200);
-		june.setBounds(300,300,200,200);
-		july.setBounds(500,300,200,200);
-		august.setBounds(700,300,200,200);
-		september.setBounds(100,500,200,200);
-		october.setBounds(300,500,200,200);
-		november.setBounds(500,500,200,200);
-		december.setBounds(700,500,200,200);
+		this.mapButtons.get("january").setBounds(100,100,200,200);
+		this.mapButtons.get("february").setBounds(300,100,200,200);
+		this.mapButtons.get("march").setBounds(500,100,200,200);
+		this.mapButtons.get("april").setBounds(700,100,200,200);
+		this.mapButtons.get("may").setBounds(100,300,200,200);
+		this.mapButtons.get("june").setBounds(300,300,200,200);
+		this.mapButtons.get("july").setBounds(500,300,200,200);
+		this.mapButtons.get("august").setBounds(700,300,200,200);
+		this.mapButtons.get("september").setBounds(100,500,200,200);
+		this.mapButtons.get("october").setBounds(300,500,200,200);
+		this.mapButtons.get("november").setBounds(500,500,200,200);
+		this.mapButtons.get("december").setBounds(700,500,200,200);
+		
+		for(HashMap.Entry<String, Button> entry : this.mapButtons.entrySet())
+		{
+			entry.getValue().addActionListener(this);
+		}
+		
+		for(HashMap.Entry<String, Button> entry : this.mapButtons.entrySet())
+		{
+			this.add(entry.getValue());
+		}
 		
 		this.quitter.addActionListener(this);
 		this.precedent.addActionListener(this);
@@ -104,6 +101,8 @@ public class CalendarFrame extends JFrame implements ActionListener {
 		this.setVisible(true);
 		this.setLayout(null);
 		
+		this.mapButtons = new HashMap<>();
+		
 		label = new JLabel(annee+" Calendar");
 		this.add(label);
 		
@@ -112,19 +111,6 @@ public class CalendarFrame extends JFrame implements ActionListener {
 		label.setBounds(325,10,500,80);
 		label.setForeground(new Color(215,90,90));
 		label.setFont(f);
-		
-		january = new Button("January");
-		february = new Button("February");
-		march = new Button("March");
-		april = new Button("April");
-		may = new Button("May");
-		june = new Button("June");
-		july = new Button("July");
-		august = new Button("August");
-		september = new Button("September");
-		october = new Button("October");
-		november = new Button("November");
-		december = new Button("December");
 		
 		ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/back.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 		precedent = new Button(precedentIcon);
@@ -136,34 +122,51 @@ public class CalendarFrame extends JFrame implements ActionListener {
         quitter.setContentAreaFilled(false);
         precedent.setBorderPainted(false);
         precedent.setContentAreaFilled(false);
-		
-		this.add(january);
-		this.add(february);
-		this.add(march);
-		this.add(april);
-		this.add(may);
-		this.add(june);
-		this.add(july);
-		this.add(august);
-		this.add(september);
-		this.add(october);
-		this.add(november);
-		this.add(december);
+
 		this.add(precedent);
 		this.add(quitter);
+
+		this.mapButtons.put("january", new Button("January"));
+		this.mapButtons.put("february", new Button("February"));
+		this.mapButtons.put("march", new Button("March"));
+		this.mapButtons.put("april", new Button("April"));
+		this.mapButtons.put("may", new Button("May"));
+		this.mapButtons.put("june", new Button("June"));
+		this.mapButtons.put("july", new Button("July"));
+		this.mapButtons.put("august", new Button("August"));
+		this.mapButtons.put("september", new Button("September"));
+		this.mapButtons.put("october", new Button("October"));
+		this.mapButtons.put("november", new Button("November"));
+		this.mapButtons.put("december", new Button("December"));
 		
-		january.setBounds(100,100,200,200);
-		february.setBounds(300,100,200,200);
-		march.setBounds(500,100,200,200);
-		april.setBounds(700,100,200,200);
-		may.setBounds(100,300,200,200);
-		june.setBounds(300,300,200,200);
-		july.setBounds(500,300,200,200);
-		august.setBounds(700,300,200,200);
-		september.setBounds(100,500,200,200);
-		october.setBounds(300,500,200,200);
-		november.setBounds(500,500,200,200);
-		december.setBounds(700,500,200,200);
+		this.mapButtons.get("january").setBounds(100,100,200,200);
+		this.mapButtons.get("february").setBounds(300,100,200,200);
+		this.mapButtons.get("march").setBounds(500,100,200,200);
+		this.mapButtons.get("april").setBounds(700,100,200,200);
+		this.mapButtons.get("may").setBounds(100,300,200,200);
+		this.mapButtons.get("june").setBounds(300,300,200,200);
+		this.mapButtons.get("july").setBounds(500,300,200,200);
+		this.mapButtons.get("august").setBounds(700,300,200,200);
+		this.mapButtons.get("september").setBounds(100,500,200,200);
+		this.mapButtons.get("october").setBounds(300,500,200,200);
+		this.mapButtons.get("november").setBounds(500,500,200,200);
+		this.mapButtons.get("december").setBounds(700,500,200,200);
+		
+		for(HashMap.Entry<String, Button> entry : this.mapButtons.entrySet())
+		{
+			entry.getValue().addActionListener(this);
+		}
+		
+		for(HashMap.Entry<String, Button> entry : this.mapButtons.entrySet())
+		{
+			this.add(entry.getValue());
+		}
+		
+		this.quitter.addActionListener(this);
+		this.precedent.addActionListener(this);
+		
+		this.add(precedent);
+		this.add(quitter);
 		
 		this.quitter.addActionListener(this);
 		this.precedent.addActionListener(this);
@@ -182,15 +185,23 @@ public class CalendarFrame extends JFrame implements ActionListener {
 			new MainFrame();
 		}
 		
-		if (e1.getSource() == this.January && MenuComboBox.choixannee.getSelectedItem() == "2016") {
-			int nbjours;
-			nbjours=(Month(1,2016).getDay());
-			int s;
-			s=(Month.getNum(new Month(1,2016)));
-			String nomdumois;
-			nomdumois=Integer.toString(s);
-			new MonthFrame(nbjours, nomdumois, "2016");
-			this.dispose();
+//		if (e1.getSource() == this.january && MenuComboBox.choixannee.getSelectedItem() == "2016") {
+//			int annee;
+//			annee = calendrier.getYear(2016).getNum();
+//			String anneestring;
+//			anneestring = Integer.toString(annee);
+//			int nbjours;
+//			nbjours = calendrier.getYear(2016).getMonths()[0].getDay();
+//			String nomdumois;
+//			nomdumois = calendrier.getYear(2016).getMonths()[0].getName();
+//			new MonthFrame(nbjours, nomdumois, anneestring);
+//			this.dispose();
+//
+//		}
+		
+		
+		
+		
+		
 		}
-	}
 }
