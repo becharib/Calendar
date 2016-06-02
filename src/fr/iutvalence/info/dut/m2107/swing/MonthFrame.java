@@ -1,20 +1,24 @@
 package fr.iutvalence.info.dut.m2107.swing;
 
+import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.List;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.*;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
-public class MonthFrame extends JFrame {
+public class MonthFrame extends JFrame implements ActionListener {
 	
 	private int joursint;
 	private String jourstring;
+	private JLabel label;
 	
-	public MonthFrame(String jours){
+	public MonthFrame(int joursint, String mois, String annee){
 		
-		this.jourstring=jours;
 		this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
 		this.setTitle("Calendar");
 		this.setSize(new Dimension(1000,800));
@@ -22,9 +26,7 @@ public class MonthFrame extends JFrame {
 		this.setResizable(false);
 		this.setLayout(null);
 		
-		joursint = Integer.parseInt(jourstring);
-		
-		if (jourstring == "28"){
+		if (joursint == 28 ){
 	    	ArrayList<Button> liste = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
@@ -63,7 +65,7 @@ public class MonthFrame extends JFrame {
 	    	liste.get(27).setBounds(853,442,142,114);
 	    	}
 		
-		if (jourstring == "29"){
+		if (joursint == 29){
 	    	ArrayList<Button> liste = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
@@ -103,7 +105,7 @@ public class MonthFrame extends JFrame {
 	    	liste.get(28).setBounds(1,556,142,114);
 	    	}
 		
-	    if (jourstring == "30"){
+	    if (joursint == 30){
 	    	ArrayList<Button> liste = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
@@ -144,7 +146,7 @@ public class MonthFrame extends JFrame {
 	    	liste.get(29).setBounds(143,556,142,114);
 	    	}
 	    
-	    if (jourstring == "31"){
+	    if (joursint == 31){
 	    	ArrayList<Button> liste = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
@@ -186,6 +188,19 @@ public class MonthFrame extends JFrame {
 	    	liste.get(30).setBounds(285,556,142,114);
 	    	}
 	    
+	    label = new JLabel(mois+ " "+annee);
+	    Font f = new Font("Arial", Font.ITALIC + Font.BOLD, 50); 
+	    label.setBounds(5,5,500,80);
+		label.setForeground(new Color(215,90,90));
+		label.setFont(f);
+		this.add(label);
+	    
 	    this.setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		
+		
 	}
 }

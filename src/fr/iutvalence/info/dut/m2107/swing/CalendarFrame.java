@@ -181,5 +181,16 @@ public class CalendarFrame extends JFrame implements ActionListener {
 			this.dispose();
 			new MainFrame();
 		}
+		
+		if (e1.getSource() == this.January && MenuComboBox.choixannee.getSelectedItem() == "2016") {
+			int nbjours;
+			nbjours=(Month(1,2016).getDay());
+			int s;
+			s=(Month.getNum(new Month(1,2016)));
+			String nomdumois;
+			nomdumois=Integer.toString(s);
+			new MonthFrame(nbjours, nomdumois, "2016");
+			this.dispose();
+		}
 	}
 }
