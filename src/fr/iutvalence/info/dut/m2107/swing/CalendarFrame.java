@@ -160,6 +160,7 @@ public class CalendarFrame extends JFrame implements ActionListener {
 			this.dispose();
 		}
 		
+		
 		else		
 			generateActionwithCalendar(e1, MenuComboBox.choixannee.getSelectedItem());
 		}
