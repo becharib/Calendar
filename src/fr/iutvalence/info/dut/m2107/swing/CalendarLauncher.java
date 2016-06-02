@@ -4,6 +4,6 @@ public class CalendarLauncher {
 	
     public static void main(String[] args) {
     	//new MainFrame();
-    	
+    	new MonthFrame();
     }
 }
