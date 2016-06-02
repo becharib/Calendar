@@ -3,21 +3,13 @@ import java.util.*;
 
 public class Calendrier {
 
-	private static List<Year> yearList = new ArrayList<Year>();
+	private List<Year> yearList = new ArrayList<Year>();
 
-
-
-	/**
-	 * 
-	 * @param dateDebut
-	 * @param dateFin
-	 */
 	public Calendrier(int beginYear, int endYear) {
 		for(int i=beginYear;i<endYear;i++){
-			yearList.add(new Year(i));
+			getYearList().add(new Year(i));
 		}
 	}
-
 
 	public static int ConvertMonth(String month){
 		int numMonth=0;
@@ -70,20 +62,25 @@ public class Calendrier {
 		return(numMonth);
 
 	}
-	
+
 	public Year getYear(int year){
-		for(int i = 0; i<this.yearList.size(); i++){
-			if(this.yearList.get(i).getNum()==year)
-				return this.yearList.get(i);
+		for(int i = 0; i<this.getYearList().size(); i++){
+			if(this.getYearList().get(i).getNum()==year)
+				return this.getYearList().get(i);
 		}
 		return null;
 	}
 
 
 	public void showCalendar() {
-		for(Year year : yearList){
+		for(Year year : getYearList()){
 			year.showYear();
 		}
+	}
+
+
+	public List<Year> getYearList() {
+		return this.yearList;
 	}
 
 }

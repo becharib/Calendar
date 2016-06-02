@@ -1,19 +1,14 @@
 package fr.iutvalence.info.dut.m2107;
-import java.util.Scanner; 
-
-import fr.iutvalence.info.dut.m2107.swing.MainFrame;
+import java.util.Scanner;
 
 public class Application {
 	public static final int beginYear=2016;
 	public static final int endYear=2023;
-	
+
 	public static void main(String[] args){
 		
-		
 		Calendrier calendar1 = new Calendrier(beginYear,endYear);
-		//Date date = calendar1.getYear(2017).getMonths(11).getDay(25); 
-		//System.out.print(date.getPublicHoliday());
-		
+
 		System.out.printf("\nWhat do you want to do ?");
 		System.out.printf("[showCalendar] [changeEvent]");
 		Scanner sc = new Scanner(System.in);
@@ -29,34 +24,33 @@ public class Application {
 				System.out.printf("Wich Year ? Exemple: 2016");
 				String yearString = sc.nextLine();
 				int year = Integer.parseInt(yearString);
-				
+
 				System.out.printf("Wich Month ? Exemple: 11");
 				String monthString = sc.nextLine();
 				int month = Integer.parseInt(monthString);
-				
+
 				System.out.printf("Wich Day ? Exemple: 2");
 				String dayString = sc.nextLine();
 				int day = Integer.parseInt(dayString);
-				
+
 				System.out.printf("Please enter a name.");
 				String name = sc.nextLine();
 				System.out.printf("Please enter a place.");
 				String place = sc.nextLine();
 				Evenement event = new Evenement(name,place);
-				
+
 				Date date = calendar1.getYear(year).getMonths(month).getDay(day); 
 				date.addEvent(event);
-			break;
+				break;
 			case "changeEvent":
-			break;
+				break;
 			case "deleteEvent":
-			break;
+				break;
 			}
 		}
-		
-		calendar1.showCalendar();
-		//new MainFrame();
 
+		calendar1.showCalendar();
+		sc.close();
 
 	}
 }

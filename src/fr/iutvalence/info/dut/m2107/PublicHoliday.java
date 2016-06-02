@@ -29,8 +29,4 @@ public enum PublicHoliday {
 		}
 		return null;
 	}
-
-	public String getName(){
-		return this.name();
-	}
 }

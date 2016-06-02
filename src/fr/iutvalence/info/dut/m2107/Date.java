@@ -9,7 +9,7 @@ public class Date{
 	private String publicHoliday;
 	private boolean publicHolidayBool;
 	private Evenement event;
-	
+
 
 	/**
 	 * 
@@ -28,7 +28,7 @@ public class Date{
 			this.publicHolidayBool=true;
 		this.event = null;
 	}	
-	
+
 	public int getDay() {
 		return this.d;
 	}
@@ -43,15 +43,15 @@ public class Date{
 	public String getPublicHoliday() {
 		return this.publicHoliday;
 	}
-	
+
 	public boolean isPublicHoliday() {
 		return this.isPublicHolidayBool();
 	}
-	
+
 	public Evenement getEvent(){
 		return this.event;
 	}
-	
+
 	public void addEvent(Evenement event){
 		this.event=event;
 	}

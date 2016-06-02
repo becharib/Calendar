@@ -9,10 +9,10 @@ public class Evenement {
 		this.name=name;
 		this.place=place;
 	}
-	
+
 	public String showEvent(){
-		return ("Name: "+this.name + " Place: "+this.place);
-		
+		return ("[Event: "+this.name + " Place: "+this.place+"]");
+
 	}
 
 }
