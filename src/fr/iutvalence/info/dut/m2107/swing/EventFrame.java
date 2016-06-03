@@ -1,17 +1,22 @@
 package fr.iutvalence.info.dut.m2107.swing;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
-public class EventFrame extends JFrame {
+public class EventFrame extends JFrame implements ActionListener{
 	
 	/**
 	 * EventFrame constructor
 	 */
+	
+	Button out;
 	
 	public EventFrame(){
 		this.setTitle("Event ");
@@ -39,9 +44,25 @@ public class EventFrame extends JFrame {
         lieu.setBounds(100,45,200,25);
         titre.setBounds(80,3,220,25);
    
-        // TODO -- Associate an Event set by the user to a date in the calendar        
+        // TODO -- Associate an Event set by the user to a date in the calendar
+        
+        ImageIcon exit = new ImageIcon(new ImageIcon("img/quitter.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+    	out = new Button(exit);
+    	this.add(out);
+    	out.setBounds(450,180,30,30);
+    	
+    	this.out.addActionListener(this);
         
         this.setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		if(e.getSource() == out){
+			this.dispose();
+		}
+		
 	}
 	
 	
