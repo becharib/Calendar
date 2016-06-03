@@ -17,15 +17,19 @@ import fr.iutvalence.info.dut.m2107.Calendrier;
 
 public class CalendarFrame extends JFrame implements ActionListener {
 	
-	Calendrier calendrier = new Calendrier(2016,2024);
+	Calendrier calendrier = MainFrame.getCalendrier();
 	
 	private Button precedent;
 	private Button quitter;
 	private JLabel label;
 	
-	
-	
 	private HashMap<String, Button> mapButtons;
+	
+	/**
+	 * CalendarFrame constructor
+	 * Frame which display months for a selected year
+	 * @param annee
+	 */
 	
 	public CalendarFrame(String annee) {
 		this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
@@ -108,6 +112,12 @@ public class CalendarFrame extends JFrame implements ActionListener {
 	    
 	}
 	
+	/**
+	 * Method which allows to factorize the code for all year of the calendar
+	 * @param e1
+	 * @param x
+	 */
+	
 	public void generateActionwithCalendar(ActionEvent e1, Object x){
 		
 
@@ -151,6 +161,10 @@ public class CalendarFrame extends JFrame implements ActionListener {
 			}
 		}
 
+	/**
+	 * Interactions with Buttons
+	 */
+	
 	@Override
 	public void actionPerformed(ActionEvent e1) {
 		

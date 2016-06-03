@@ -10,7 +10,11 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import fr.iutvalence.info.dut.m2107.Calendrier;
+
 public class MenuComboBox extends JFrame implements ActionListener {
+	
+	Calendrier calendrier = MainFrame.getCalendrier();
 	
 	private Button valider;
 	private MainFrame frame;
@@ -18,6 +22,10 @@ public class MenuComboBox extends JFrame implements ActionListener {
 	private JLabel label;
 	private Button back;
 	private Button continuer;
+	
+	/**
+	 * Combobox constructor
+	 */
 	
 	public MenuComboBox() {
 	this.setTitle("Year Choices ");
@@ -28,7 +36,9 @@ public class MenuComboBox extends JFrame implements ActionListener {
     this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
     this.setLayout(null);
     
-    
+    /**
+     * Creation of a label on the top of JcomboBox 
+     */
     
     label = new JLabel("Choose a year ");
     label.setBounds(107,50,128,50);
@@ -44,6 +54,10 @@ public class MenuComboBox extends JFrame implements ActionListener {
     this.choixannee.addItem("2023");
     this.choixannee.setBounds(113,90,70,20);
     
+    /**
+     * Buttons to continue and exit
+     */
+    
     ImageIcon precedentIcon = new ImageIcon(new ImageIcon("img/back.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 	back = new Button(precedentIcon);
 	ImageIcon continuerIcon = new ImageIcon(new ImageIcon("img/valider.png").getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
@@ -55,6 +69,9 @@ public class MenuComboBox extends JFrame implements ActionListener {
     back.setBorderPainted(false);
     back.setContentAreaFilled(false);
     
+    /**
+     * Action Listener for Buttons back exit and the choice of year
+     */
     this.back.addActionListener(this);
 	this.continuer.addActionListener(this);
 	this.choixannee.addActionListener(this);
@@ -67,7 +84,12 @@ public class MenuComboBox extends JFrame implements ActionListener {
     
 	}
 
+	
 	@Override
+	/**
+	 * Interaction with Buttons
+	 */
+	
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getSource() == this.back) {

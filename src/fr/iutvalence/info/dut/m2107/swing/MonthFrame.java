@@ -17,7 +17,7 @@ import fr.iutvalence.info.dut.m2107.Calendrier;
 
 public class MonthFrame extends JFrame implements ActionListener {
 	
-	Calendrier calendrier = new Calendrier(2016,2024);
+	Calendrier calendrier = MainFrame.getCalendrier();
 	
 	private int joursint;
 	private String jourstring;
@@ -28,6 +28,14 @@ public class MonthFrame extends JFrame implements ActionListener {
 	ArrayList<Button> liste28;
 	Button back;
 	Button exit;
+	
+	/**
+	 * MonthFrame constructor
+	 * Frame which display days for a year and a month selected
+	 * @param joursint
+	 * @param mois
+	 * @param annee
+	 */
 	
 	public MonthFrame(int joursint, String mois, String annee){
 		
@@ -226,7 +234,7 @@ public class MonthFrame extends JFrame implements ActionListener {
 	    
 	    this.setVisible(true);    
 		
-		for(int i=2016;i<2024;i++){
+		/*for(int i=2016;i<2024;i++){
 			for(int j=1;j<=12;j++){
 				for(int k=1;k<=calendrier.getYear(i).getMonthTab()[j].getNbDay(); k++){
 					if(calendrier.getYear(i).getMonthTab()[j].getDay(k).isPublicHolidayBool()){
@@ -246,7 +254,15 @@ public class MonthFrame extends JFrame implements ActionListener {
 					}
 				}
 			}
+			
+			*********************** Afficher les jours fériés en gris(fonctionnel à moitié)
+			*
+			*/ 
 	}
+	
+	/**
+	 * Interactions with Buttons
+	 */
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

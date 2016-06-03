@@ -8,6 +8,10 @@ import javax.swing.JPanel;
 
 public class ImagePanel extends JPanel {
  
+	/**
+	 * Class which allows to set an image background in a frame
+	 */
+	
     private Image img;
      
     public ImagePanel(Image img){
