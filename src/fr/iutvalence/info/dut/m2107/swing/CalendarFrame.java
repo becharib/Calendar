@@ -40,6 +40,10 @@ public class CalendarFrame extends JFrame implements ActionListener {
 		this.setVisible(true);
 		this.setLayout(null);
 		
+		/**
+		 * Creation of a Map of Buttons
+		 */
+		
 		this.mapButtons = new HashMap<>();
 		
 		label = new JLabel(annee+" Calendar");
