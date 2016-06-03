@@ -1,13 +1,13 @@
 package fr.iutvalence.info.dut.m2107;
 
 /**
- * Class to defin a Month with :
+ * Class to define a Month with :
  * -a table of days (month)
  * -the number of the current month (num)
  * -the year of the current month(year)
  * -the name of the month (name)
  * -the number of days of the  Month (nbDay)
- * @author William
+ * 
  *
  */
 
@@ -117,7 +117,9 @@ public class Month {
 		}
 	}
 
-
+	/**
+	 * Show all the days of a Month.
+	 */
 	public void showMonth(){
 		System.out.println("Month: "+this.name);
 
@@ -174,6 +176,10 @@ public class Month {
 		return this.month;
 	}
 
+	/**
+	 * 
+	 * return the number of days in a month
+	 */
 	public int getNbDay() {
 		return nbDay;
 	}

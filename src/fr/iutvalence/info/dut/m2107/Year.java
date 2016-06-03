@@ -2,8 +2,7 @@ package fr.iutvalence.info.dut.m2107;
 
 import fr.iutvalence.info.dut.m2107.Month;
 /**
- * Class to defin a Year as a table of 12 Month(year) and a number(num)
- * @author William
+ * Class to define a Year as a table of 12 Month(year) and a number(num)
  *
  */
 public class Year {

@@ -9,33 +9,33 @@ public class Application {
 		
 		Calendrier calendar1 = new Calendrier(beginYear,endYear+1);
 		
-		System.out.printf("\nWhat do you want to do ?");
-		System.out.printf("[showCalendar] [changeEvent]");
+		System.out.printf("\n What do you want to do ? ");
+		System.out.printf("[showCalendar] [changeEvent] ");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		switch (str){
 		case "showCalendar":
 			calendar1.showCalendar();
 		case "changeEvent":
-			System.out.printf("[addEvent] [changeEvent] [deleteEvent]");
+			System.out.printf("[addEvent] [changeEvent] [deleteEvent] ");
 			str = sc.nextLine();
 			switch (str){
 			case "addEvent":
-				System.out.printf("Which Year ? Exemple: 2016");
+				System.out.printf("Which Year ? Exemple: 2016 ");
 				String yearString = sc.nextLine();
 				int year = Integer.parseInt(yearString);
 
-				System.out.printf("Which Month ? Exemple: 11");
+				System.out.printf("Which Month ? Exemple: 11 ");
 				String monthString = sc.nextLine();
 				int month = Integer.parseInt(monthString);
 
-				System.out.printf("Which Day ? Exemple: 2");
+				System.out.printf("Which Day ? Exemple: 2 ");
 				String dayString = sc.nextLine();
 				int day = Integer.parseInt(dayString);
 
-				System.out.printf("Please enter a name.");
+				System.out.printf("Please enter a name. ");
 				String name = sc.nextLine();
-				System.out.printf("Please enter a place.");
+				System.out.printf("Please enter a place. ");
 				String place = sc.nextLine();
 				Evenement event = new Evenement(name,place);
 

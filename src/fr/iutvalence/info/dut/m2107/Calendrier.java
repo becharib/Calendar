@@ -2,7 +2,6 @@ package fr.iutvalence.info.dut.m2107;
 import java.util.*;
 /**
  * Class which have an ArrayList of Years(yearList)
- * @author William
  *
  */
 public class Calendrier {
@@ -62,7 +61,7 @@ public class Calendrier {
 				numMonth=12;
 				break;
 			default:
-				System.out.println("Please enter the month again");
+				System.out.println("Please enter the month again ");
 			}
 
 

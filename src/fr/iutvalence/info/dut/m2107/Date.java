@@ -5,7 +5,7 @@ package fr.iutvalence.info.dut.m2107;
  * Date is a class to defin the day.
  * The current day has a day number, it have a month number and a year number, and finally an event which is null at beginning.
  * the current date can also be a publicHoliday, we know that thanks to the boolean publicHolidayBool
- * @author William
+ * 
  *
  */
 public class Date{
@@ -82,9 +82,12 @@ public class Date{
 	public String getPublicHoliday() {
 		return this.publicHoliday;
 	}
-
+	/**
+	 * 
+	 * return true if the day is a PublicHoliday, else return false
+	 */
 	public boolean isPublicHoliday() {
-		return this.isPublicHolidayBool();//utilité?
+		return this.isPublicHolidayBool();
 	}
 
 	public Evenement getEvent(){
