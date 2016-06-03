@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.swing.ImageIcon;
@@ -21,6 +22,8 @@ public class CalendarFrame extends JFrame implements ActionListener {
 	private Button precedent;
 	private Button quitter;
 	private JLabel label;
+	
+	
 	
 	private HashMap<String, Button> mapButtons;
 	
@@ -164,15 +167,5 @@ public class CalendarFrame extends JFrame implements ActionListener {
 		else		
 			generateActionwithCalendar(e1, MenuComboBox.choixannee.getSelectedItem());
 		}
-	
-	
-	/* POUR BILAL : POUR AFFICHER LES JOURS FERIES DIFFEREMMENT
-	 * for(int i=2016;i<2024;i++){
-		for(int j=0;j<12;j++){
-			for(int k=0;k<calendrier.getYear(i).getMonthTab()[j].getNbDay(); k++){
-				if(calendrier.getYear(i).getMonthTab()[j].getDay(k).isPublicHolidayBool()){
-					//afficher case d'une couleur différente
-				}
-			}
-		}*/
+
 	}

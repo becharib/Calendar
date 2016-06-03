@@ -3,6 +3,7 @@ package fr.iutvalence.info.dut.m2107.swing;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,11 +13,19 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import fr.iutvalence.info.dut.m2107.Calendrier;
+
 public class MonthFrame extends JFrame implements ActionListener {
+	
+	Calendrier calendrier = new Calendrier(2016,2024);
 	
 	private int joursint;
 	private String jourstring;
 	private JLabel label;
+	ArrayList<Button> liste31;
+	ArrayList<Button> liste30;
+	ArrayList<Button> liste29;
+	ArrayList<Button> liste28;
 	Button back;
 	Button exit;
 	
@@ -30,165 +39,165 @@ public class MonthFrame extends JFrame implements ActionListener {
 		this.setLayout(null);
 		
 		if (joursint == 28 ){
-	    	ArrayList<Button> liste = new ArrayList<Button>();
+	    	liste28 = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
 	    	{
-	    		liste.add(new Button(i+1));
-	    		this.add(liste.get(i));
+	    		liste28.add(new Button(i+1));
+	    		this.add(liste28.get(i));
 	    	}
 	    	
-	    	liste.get(0).setBounds(1,100,142,114);
-	    	liste.get(1).setBounds(143,100,142,114);
-	    	liste.get(2).setBounds(285,100,142,114);
-	    	liste.get(3).setBounds(427,100,142,114);
-	    	liste.get(4).setBounds(569,100,142,114);
-	    	liste.get(5).setBounds(711,100,142,114);
-	    	liste.get(6).setBounds(853,100,142,114);
-	    	liste.get(7).setBounds(1,214,142,114);
-	    	liste.get(8).setBounds(143,214,142,114);
-	    	liste.get(9).setBounds(285,214,142,114);
-	    	liste.get(10).setBounds(427,214,142,114);
-	    	liste.get(11).setBounds(569,214,142,114);
-	    	liste.get(12).setBounds(711,214,142,114);
-	    	liste.get(13).setBounds(853,214,142,114);
-	    	liste.get(14).setBounds(1,328,142,114);
-	    	liste.get(15).setBounds(143,328,142,114);
-	    	liste.get(16).setBounds(285,328,142,114);
-	    	liste.get(17).setBounds(427,328,142,114);
-	    	liste.get(18).setBounds(569,328,142,114);
-	    	liste.get(19).setBounds(711,328,142,114);
-	    	liste.get(20).setBounds(853,328,142,114);
-	    	liste.get(21).setBounds(1,442,142,114);
-	    	liste.get(22).setBounds(143,442,142,114);
-	    	liste.get(23).setBounds(285,442,142,114);
-	    	liste.get(24).setBounds(427,442,142,114);
-	    	liste.get(25).setBounds(569,442,142,114);
-	    	liste.get(26).setBounds(711,442,142,114);
-	    	liste.get(27).setBounds(853,442,142,114);
+	    	liste28.get(0).setBounds(1,100,142,114);
+	    	liste28.get(1).setBounds(143,100,142,114);
+	    	liste28.get(2).setBounds(285,100,142,114);
+	    	liste28.get(3).setBounds(427,100,142,114);
+	    	liste28.get(4).setBounds(569,100,142,114);
+	    	liste28.get(5).setBounds(711,100,142,114);
+	    	liste28.get(6).setBounds(853,100,142,114);
+	    	liste28.get(7).setBounds(1,214,142,114);
+	    	liste28.get(8).setBounds(143,214,142,114);
+	    	liste28.get(9).setBounds(285,214,142,114);
+	    	liste28.get(10).setBounds(427,214,142,114);
+	    	liste28.get(11).setBounds(569,214,142,114);
+	    	liste28.get(12).setBounds(711,214,142,114);
+	    	liste28.get(13).setBounds(853,214,142,114);
+	    	liste28.get(14).setBounds(1,328,142,114);
+	    	liste28.get(15).setBounds(143,328,142,114);
+	    	liste28.get(16).setBounds(285,328,142,114);
+	    	liste28.get(17).setBounds(427,328,142,114);
+	    	liste28.get(18).setBounds(569,328,142,114);
+	    	liste28.get(19).setBounds(711,328,142,114);
+	    	liste28.get(20).setBounds(853,328,142,114);
+	    	liste28.get(21).setBounds(1,442,142,114);
+	    	liste28.get(22).setBounds(143,442,142,114);
+	    	liste28.get(23).setBounds(285,442,142,114);
+	    	liste28.get(24).setBounds(427,442,142,114);
+	    	liste28.get(25).setBounds(569,442,142,114);
+	    	liste28.get(26).setBounds(711,442,142,114);
+	    	liste28.get(27).setBounds(853,442,142,114);
 	    	}
 		
 		if (joursint == 29){
-	    	ArrayList<Button> liste = new ArrayList<Button>();
+	    	liste29 = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
 	    	{
-	    		liste.add(new Button(i+1));
-	    		this.add(liste.get(i));
+	    		liste29.add(new Button(i+1));
+	    		this.add(liste29.get(i));
 	    	}
 	    	
-	    	liste.get(0).setBounds(1,100,142,114);
-	    	liste.get(1).setBounds(143,100,142,114);
-	    	liste.get(2).setBounds(285,100,142,114);
-	    	liste.get(3).setBounds(427,100,142,114);
-	    	liste.get(4).setBounds(569,100,142,114);
-	    	liste.get(5).setBounds(711,100,142,114);
-	    	liste.get(6).setBounds(853,100,142,114);
-	    	liste.get(7).setBounds(1,214,142,114);
-	    	liste.get(8).setBounds(143,214,142,114);
-	    	liste.get(9).setBounds(285,214,142,114);
-	    	liste.get(10).setBounds(427,214,142,114);
-	    	liste.get(11).setBounds(569,214,142,114);
-	    	liste.get(12).setBounds(711,214,142,114);
-	    	liste.get(13).setBounds(853,214,142,114);
-	    	liste.get(14).setBounds(1,328,142,114);
-	    	liste.get(15).setBounds(143,328,142,114);
-	    	liste.get(16).setBounds(285,328,142,114);
-	    	liste.get(17).setBounds(427,328,142,114);
-	    	liste.get(18).setBounds(569,328,142,114);
-	    	liste.get(19).setBounds(711,328,142,114);
-	    	liste.get(20).setBounds(853,328,142,114);
-	    	liste.get(21).setBounds(1,442,142,114);
-	    	liste.get(22).setBounds(143,442,142,114);
-	    	liste.get(23).setBounds(285,442,142,114);
-	    	liste.get(24).setBounds(427,442,142,114);
-	    	liste.get(25).setBounds(569,442,142,114);
-	    	liste.get(26).setBounds(711,442,142,114);
-	    	liste.get(27).setBounds(853,442,142,114);
-	    	liste.get(28).setBounds(1,556,142,114);
+	    	liste29.get(0).setBounds(1,100,142,114);
+	    	liste29.get(1).setBounds(143,100,142,114);
+	    	liste29.get(2).setBounds(285,100,142,114);
+	    	liste29.get(3).setBounds(427,100,142,114);
+	    	liste29.get(4).setBounds(569,100,142,114);
+	    	liste29.get(5).setBounds(711,100,142,114);
+	    	liste29.get(6).setBounds(853,100,142,114);
+	    	liste29.get(7).setBounds(1,214,142,114);
+	    	liste29.get(8).setBounds(143,214,142,114);
+	    	liste29.get(9).setBounds(285,214,142,114);
+	    	liste29.get(10).setBounds(427,214,142,114);
+	    	liste29.get(11).setBounds(569,214,142,114);
+	    	liste29.get(12).setBounds(711,214,142,114);
+	    	liste29.get(13).setBounds(853,214,142,114);
+	    	liste29.get(14).setBounds(1,328,142,114);
+	    	liste29.get(15).setBounds(143,328,142,114);
+	    	liste29.get(16).setBounds(285,328,142,114);
+	    	liste29.get(17).setBounds(427,328,142,114);
+	    	liste29.get(18).setBounds(569,328,142,114);
+	    	liste29.get(19).setBounds(711,328,142,114);
+	    	liste29.get(20).setBounds(853,328,142,114);
+	    	liste29.get(21).setBounds(1,442,142,114);
+	    	liste29.get(22).setBounds(143,442,142,114);
+	    	liste29.get(23).setBounds(285,442,142,114);
+	    	liste29.get(24).setBounds(427,442,142,114);
+	    	liste29.get(25).setBounds(569,442,142,114);
+	    	liste29.get(26).setBounds(711,442,142,114);
+	    	liste29.get(27).setBounds(853,442,142,114);
+	    	liste29.get(28).setBounds(1,556,142,114);
 	    	}
 		
 	    if (joursint == 30){
-	    	ArrayList<Button> liste = new ArrayList<Button>();
+	    	liste30 = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
 	    	{
-	    		liste.add(new Button(i+1));
-	    		this.add(liste.get(i));
+	    		liste30.add(new Button(i+1));
+	    		this.add(liste30.get(i));
 	    	}
 	    	
-	    	liste.get(0).setBounds(1,100,142,114);
-	    	liste.get(1).setBounds(143,100,142,114);
-	    	liste.get(2).setBounds(285,100,142,114);
-	    	liste.get(3).setBounds(427,100,142,114);
-	    	liste.get(4).setBounds(569,100,142,114);
-	    	liste.get(5).setBounds(711,100,142,114);
-	    	liste.get(6).setBounds(853,100,142,114);
-	    	liste.get(7).setBounds(1,214,142,114);
-	    	liste.get(8).setBounds(143,214,142,114);
-	    	liste.get(9).setBounds(285,214,142,114);
-	    	liste.get(10).setBounds(427,214,142,114);
-	    	liste.get(11).setBounds(569,214,142,114);
-	    	liste.get(12).setBounds(711,214,142,114);
-	    	liste.get(13).setBounds(853,214,142,114);
-	    	liste.get(14).setBounds(1,328,142,114);
-	    	liste.get(15).setBounds(143,328,142,114);
-	    	liste.get(16).setBounds(285,328,142,114);
-	    	liste.get(17).setBounds(427,328,142,114);
-	    	liste.get(18).setBounds(569,328,142,114);
-	    	liste.get(19).setBounds(711,328,142,114);
-	    	liste.get(20).setBounds(853,328,142,114);
-	    	liste.get(21).setBounds(1,442,142,114);
-	    	liste.get(22).setBounds(143,442,142,114);
-	    	liste.get(23).setBounds(285,442,142,114);
-	    	liste.get(24).setBounds(427,442,142,114);
-	    	liste.get(25).setBounds(569,442,142,114);
-	    	liste.get(26).setBounds(711,442,142,114);
-	    	liste.get(27).setBounds(853,442,142,114);
-	    	liste.get(28).setBounds(1,556,142,114);
-	    	liste.get(29).setBounds(143,556,142,114);
+	    	liste30.get(0).setBounds(1,100,142,114);
+	    	liste30.get(1).setBounds(143,100,142,114);
+	    	liste30.get(2).setBounds(285,100,142,114);
+	    	liste30.get(3).setBounds(427,100,142,114);
+	    	liste30.get(4).setBounds(569,100,142,114);
+	    	liste30.get(5).setBounds(711,100,142,114);
+	    	liste30.get(6).setBounds(853,100,142,114);
+	    	liste30.get(7).setBounds(1,214,142,114);
+	    	liste30.get(8).setBounds(143,214,142,114);
+	    	liste30.get(9).setBounds(285,214,142,114);
+	    	liste30.get(10).setBounds(427,214,142,114);
+	    	liste30.get(11).setBounds(569,214,142,114);
+	    	liste30.get(12).setBounds(711,214,142,114);
+	    	liste30.get(13).setBounds(853,214,142,114);
+	    	liste30.get(14).setBounds(1,328,142,114);
+	    	liste30.get(15).setBounds(143,328,142,114);
+	    	liste30.get(16).setBounds(285,328,142,114);
+	    	liste30.get(17).setBounds(427,328,142,114);
+	    	liste30.get(18).setBounds(569,328,142,114);
+	    	liste30.get(19).setBounds(711,328,142,114);
+	    	liste30.get(20).setBounds(853,328,142,114);
+	    	liste30.get(21).setBounds(1,442,142,114);
+	    	liste30.get(22).setBounds(143,442,142,114);
+	    	liste30.get(23).setBounds(285,442,142,114);
+	    	liste30.get(24).setBounds(427,442,142,114);
+	    	liste30.get(25).setBounds(569,442,142,114);
+	    	liste30.get(26).setBounds(711,442,142,114);
+	    	liste30.get(27).setBounds(853,442,142,114);
+	    	liste30.get(28).setBounds(1,556,142,114);
+	    	liste30.get(29).setBounds(143,556,142,114);
 	    	}
 	    
 	    if (joursint == 31){
-	    	ArrayList<Button> liste = new ArrayList<Button>();
+	    	liste31 = new ArrayList<Button>();
 	    	
 	    	for(int i=0;i<=joursint;i++)
 	    	{
-	    		liste.add(new Button(i+1));
-	    		this.add(liste.get(i));
+	    		liste31.add(new Button(i+1));
+	    		this.add(liste31.get(i));
 	    	}
 	    	
-	    	liste.get(0).setBounds(1,100,142,114);
-	    	liste.get(1).setBounds(143,100,142,114);
-	    	liste.get(2).setBounds(285,100,142,114);
-	    	liste.get(3).setBounds(427,100,142,114);
-	    	liste.get(4).setBounds(569,100,142,114);
-	    	liste.get(5).setBounds(711,100,142,114);
-	    	liste.get(6).setBounds(853,100,142,114);
-	    	liste.get(7).setBounds(1,214,142,114);
-	    	liste.get(8).setBounds(143,214,142,114);
-	    	liste.get(9).setBounds(285,214,142,114);
-	    	liste.get(10).setBounds(427,214,142,114);
-	    	liste.get(11).setBounds(569,214,142,114);
-	    	liste.get(12).setBounds(711,214,142,114);
-	    	liste.get(13).setBounds(853,214,142,114);
-	    	liste.get(14).setBounds(1,328,142,114);
-	    	liste.get(15).setBounds(143,328,142,114);
-	    	liste.get(16).setBounds(285,328,142,114);
-	    	liste.get(17).setBounds(427,328,142,114);
-	    	liste.get(18).setBounds(569,328,142,114);
-	    	liste.get(19).setBounds(711,328,142,114);
-	    	liste.get(20).setBounds(853,328,142,114);
-	    	liste.get(21).setBounds(1,442,142,114);
-	    	liste.get(22).setBounds(143,442,142,114);
-	    	liste.get(23).setBounds(285,442,142,114);
-	    	liste.get(24).setBounds(427,442,142,114);
-	    	liste.get(25).setBounds(569,442,142,114);
-	    	liste.get(26).setBounds(711,442,142,114);
-	    	liste.get(27).setBounds(853,442,142,114);
-	    	liste.get(28).setBounds(1,556,142,114);
-	    	liste.get(29).setBounds(143,556,142,114);
-	    	liste.get(30).setBounds(285,556,142,114);
+	    	liste31.get(0).setBounds(1,100,142,114);
+	    	liste31.get(1).setBounds(143,100,142,114);
+	    	liste31.get(2).setBounds(285,100,142,114);
+	    	liste31.get(3).setBounds(427,100,142,114);
+	    	liste31.get(4).setBounds(569,100,142,114);
+	    	liste31.get(5).setBounds(711,100,142,114);
+	    	liste31.get(6).setBounds(853,100,142,114);
+	    	liste31.get(7).setBounds(1,214,142,114);
+	    	liste31.get(8).setBounds(143,214,142,114);
+	    	liste31.get(9).setBounds(285,214,142,114);
+	    	liste31.get(10).setBounds(427,214,142,114);
+	    	liste31.get(11).setBounds(569,214,142,114);
+	    	liste31.get(12).setBounds(711,214,142,114);
+	    	liste31.get(13).setBounds(853,214,142,114);
+	    	liste31.get(14).setBounds(1,328,142,114);
+	    	liste31.get(15).setBounds(143,328,142,114);
+	    	liste31.get(16).setBounds(285,328,142,114);
+	    	liste31.get(17).setBounds(427,328,142,114);
+	    	liste31.get(18).setBounds(569,328,142,114);
+	    	liste31.get(19).setBounds(711,328,142,114);
+	    	liste31.get(20).setBounds(853,328,142,114);
+	    	liste31.get(21).setBounds(1,442,142,114);
+	    	liste31.get(22).setBounds(143,442,142,114);
+	    	liste31.get(23).setBounds(285,442,142,114);
+	    	liste31.get(24).setBounds(427,442,142,114);
+	    	liste31.get(25).setBounds(569,442,142,114);
+	    	liste31.get(26).setBounds(711,442,142,114);
+	    	liste31.get(27).setBounds(853,442,142,114);
+	    	liste31.get(28).setBounds(1,556,142,114);
+	    	liste31.get(29).setBounds(143,556,142,114);
+	    	liste31.get(30).setBounds(285,556,142,114);
 	    	}
 	    
 	    label = new JLabel(mois+ " "+annee);
@@ -215,7 +224,28 @@ public class MonthFrame extends JFrame implements ActionListener {
 		this.exit.addActionListener(this);
 		this.back.addActionListener(this);
 	    
-	    this.setVisible(true);
+	    this.setVisible(true);    
+		
+		for(int i=2016;i<2024;i++){
+			for(int j=1;j<=12;j++){
+				for(int k=1;k<=calendrier.getYear(i).getMonthTab()[j].getNbDay(); k++){
+					if(calendrier.getYear(i).getMonthTab()[j].getDay(k).isPublicHolidayBool()){
+						if(calendrier.getYear(i).getMonthTab()[j].getNbDay() == 28){
+							liste28.get(k-1).setBackground(Color.GRAY);
+						}
+						else if(calendrier.getYear(i).getMonthTab()[j].getNbDay() == 29){
+							liste29.get(k-1).setBackground(Color.GRAY);
+						}
+						else if(calendrier.getYear(i).getMonthTab()[j].getNbDay() == 30){
+							liste30.get(k-1).setBackground(Color.GRAY);
+						}
+						else if(calendrier.getYear(i).getMonthTab()[j].getNbDay() == 31){
+							liste31.get(k-1).setBackground(Color.GRAY);
+						}
+						}
+					}
+				}
+			}
 	}
 
 	@Override

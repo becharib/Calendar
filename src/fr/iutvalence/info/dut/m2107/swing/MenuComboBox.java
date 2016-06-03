@@ -28,6 +28,8 @@ public class MenuComboBox extends JFrame implements ActionListener {
     this.setContentPane(new ImagePanel(new ImageIcon("img/fond.png").getImage()));
     this.setLayout(null);
     
+    
+    
     label = new JLabel("Choose a year ");
     label.setBounds(107,50,128,50);
     
