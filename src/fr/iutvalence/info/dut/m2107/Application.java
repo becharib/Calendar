@@ -2,12 +2,15 @@ package fr.iutvalence.info.dut.m2107;
 import java.util.Scanner;
 
 public class Application {
+	
+	static Calendrier calendrier;
+	
 	public static final int beginYear=2016;
 	public static final int endYear=2023;
 
 	public static void main(String[] args){
 		
-		Calendrier calendar1 = new Calendrier(beginYear,endYear+1);
+		calendrier = new Calendrier(beginYear,endYear+1);
 		
 		System.out.printf("\n What do you want to do ? ");
 		System.out.printf("[showCalendar] [changeEvent] ");
@@ -15,7 +18,7 @@ public class Application {
 		String str = sc.nextLine();
 		switch (str){
 		case "showCalendar":
-			calendar1.showCalendar();
+			calendrier.showCalendar();
 		case "changeEvent":
 			System.out.printf("[addEvent] [changeEvent] [deleteEvent] ");
 			str = sc.nextLine();
@@ -39,7 +42,7 @@ public class Application {
 				String place = sc.nextLine();
 				Evenement event = new Evenement(name,place);
 
-				Date date = calendar1.getYear(year).getMonths(month).getDay(day); 
+				Date date = calendrier.getYear(year).getMonths(month).getDay(day); 
 				date.addEvent(event);
 				break;
 			case "changeEvent":
@@ -49,7 +52,7 @@ public class Application {
 			}
 		}
 
-		calendar1.showCalendar();
+		calendrier.showCalendar();
 		sc.close();
 
 	}
